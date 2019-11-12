@@ -99,11 +99,11 @@ var utils = {
 		}
 	}, // /set_menu.
 
-	get_current_tab: function( fn ) {
+	get_current_tab: function( fn: any ) {
 		'use strict';
 
 		var self = this;
-		chrome.tabs.query( { 'active': true, 'currentWindow': true }, function( tabs ) {
+		chrome.tabs.query( { 'active': true, 'currentWindow': true }, function( tabs: any ) {
 			if ( tabs.length > 0 ) {
 				if ( tabs[0].url.substring( 0, 4 ) !== 'http' ) { // Url don't begin with http or https.
 					self.url_not_valid();
@@ -157,8 +157,8 @@ var utils = {
 	copy_text: function( div_id: string ) {
 		'use strict';
 
-		var self = this;
-		var copyText = document.getElementById( div_id );
+		var self: any     = this;
+		var copyText: any = document.getElementById( div_id );
 
 		copyText.select();
 

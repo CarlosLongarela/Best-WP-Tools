@@ -8,7 +8,6 @@
     "sourceMap": true
   },
   "types": [
-    //(various types, e.g. jquery, core-js),
     "chrome",
     "firefox"
   ]

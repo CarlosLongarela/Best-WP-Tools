@@ -12,12 +12,12 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	}
 
 	function show_tabs_buttons( tab: any ) {
-		var current_url                  = tab.url;
-		var encoded_current_url          = encodeURI( current_url );
-		var current_domain               = utils.extract_hostname( current_url );
-		var current_naked_domain         = current_domain.replace( 'www.', '' );
-		var current_url_without_protocol = current_url.replace( 'https://', '' );
-		current_url_without_protocol     = current_url_without_protocol.replace( 'http://', '' );
+		var current_url: string                  = tab.url;
+		var encoded_current_url: string          = encodeURI( current_url );
+		var current_domain: string               = utils.extract_hostname( current_url );
+		var current_naked_domain: string         = current_domain.replace( 'www.', '' );
+		var current_url_without_protocol: string = current_url.replace( 'https://', '' );
+		current_url_without_protocol             = current_url_without_protocol.replace( 'http://', '' );
 
 		// WPO.
 		document.getElementById( 'pagespeed_insights' ).addEventListener( 'click', function() {
