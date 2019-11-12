@@ -119,7 +119,7 @@ var utils = {
 	url_not_valid: function() {
 		'use strict';
 
-		document.getElementById( 'data' ).innerHTML = '<div id="notice"><p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/great-wp-tools/" target="_blank" rel="noopener">https://tabernawp.com/great-wp-tools/</a></p></div>';
+		document.getElementById( 'data' ).innerHTML = '<div id="notice"><p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wp-tools/" target="_blank" rel="noopener">https://tabernawp.com/best-wp-tools/</a></p></div>';
 
 		this.show_div( 'notice' );
 	}, // /url_not_valid.
