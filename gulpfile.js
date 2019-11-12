@@ -13,11 +13,11 @@ var gulp         = require( 'gulp' ),
 var tsconfig = require( './tsconfig.json' );
 
 var SourceTS = [
-	'__src/typescript/*.ts',
+	'src/typescript/*.ts',
 ];
 
 var SourceSCSS = [
-	'__src/scss/*.scss',
+	'src/scss/*.scss',
 ];
 
 var plugins = [
