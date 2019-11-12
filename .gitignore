@@ -1,0 +1,3 @@
+*.lock
+*.phar
+/node_modules

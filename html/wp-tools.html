@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WordPress Config & Tools</title>
+	<script src="../js/general.min.js"></script>
+	<link rel="stylesheet" href="../css/styles.css" type="text/css"></link>
+</head>
+<body id="total-wp-tools">
+
+	<div id="main">
+		<nav id="primary_menu"></nav>
+
+		<div id="data">
+			<h1>{{msg_wp_tools_title}}</h1>
+
+			<div id="notice"></div>
+
+			<h4>{{msg_wp_config_title}}</h4>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{{msg_security_keys}}</legend>				<!--https://jsfiddle.net/-->
+				<p>{{msg_generate_salt}}</p>
+				<p><a class="btn_light" href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="noopener">{{msg_generate}}</a></p>
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>WP_SITEURL</legend>
+				<input type="text" class="code" readonly id="wp_site_url" value="define( 'WP_SITEURL', 'http://tu-sitio.com' );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>WP_HOME</legend>
+				<input type="text" class="code" readonly id="wp_home" value="define( 'WP_HOME', 'http://tu-sitio.com' );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{{msg_cookie_domain}}</legend>
+				<input type="text" class="code" readonly id="wp_cookie_domain" value="define( 'COOKIE_DOMAIN', 'tu-sitio.com' );">
+			</fieldset>
+
+			<fieldset class="wp_fieldset visible">
+				<legend>{{msg_post_autosave}}</legend>
+
+				<select name="post_autosave" id="post_autosave">
+					<option value="30">{{msg_post_30_sec}}</option>
+					<option value="60" selected>{{msg_post_60_sec}}</option>
+					<option value="90">{{msg_post_90_sec}}</option>
+					<option value="120">{{msg_post_2_min}}</option>
+					<option value="180">{{msg_post_3_min}}</option>
+					<option value="240">{{msg_post_4_min}}</option>
+					<option value="300">{{msg_post_5_min}}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="post_autosave_text" value="define( 'AUTOSAVE_INTERVAL', 60 );">
+			</fieldset>
+
+			<fieldset class="wp_fieldset visible">
+				<legend>{{msg_post_revisions}}</legend>
+
+				<select name="post_revisions" id="post_revisions">
+					<option value="true" selected>{{msg_revisions_true}}</option>
+					<option value="false">{{msg_revisions_false}}</option>
+					<option value="1">{{msg_revisions_1}}</option>
+					<option value="3">{{msg_revisions_3}}</option>
+					<option value="5">{{msg_revisions_5}}</option>
+					<option value="10">{{msg_revisions_10}}</option>
+					<option value="15">{{msg_revisions_15}}</option>
+
+				</select>
+
+				<input type="text" class="code" readonly id="post_revisions_text" value="define( 'WP_POST_REVISIONS', true );">
+			</fieldset>
+		</div>
+	</div>
+
+	<script src="../js/wp-tools.min.js"></script>
+</body>
+</html>

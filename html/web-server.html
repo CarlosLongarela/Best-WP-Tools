@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webserver Apache/Nginx</title>
+	<script src="../js/general.min.js"></script>
+	<link rel="stylesheet" href="../css/styles.css" type="text/css"></link>
+</head>
+<body id="total-wp-tools">
+
+	<div id="main">
+		<nav id="primary_menu"></nav>
+
+		<div id="data">
+			<h1>Web Server</h1>
+
+			<div id="notice"></div>
+
+			<div id="slider_apache_nginx">
+				Apache
+				<label class="switch">
+					<input id="check_apache_nginx" type="checkbox">
+					<span class="slider round"></span>
+				</label>
+				Nginx
+			</div>
+
+			<div id="apache_div" style="display:block">
+				<h4>Basic WordPress htaccess</h4>
+				<img src="../img/copy.png" width="16" height="16" class="icon_copy" id="copy_apache" title="{{msg_text_copy}}"  />
+<textarea id="basic_apache" class="code" readonly>
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+</textarea>
+			</div>
+
+			<div id="nginx_div" style="display:none">
+					<h4>Basic WordPress Nginx config</h4>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy" id="copy_nginx" title="{{msg_text_copy}}" />
+<textarea id="basic_nginx" class="code" readonly>
+# WordPress single site rules.
+# Designed to be included in any server {} block.
+# Upstream to abstract backend connection(s) for php
+upstream php {
+	server unix:/tmp/php-cgi.socket;
+	server 127.0.0.1:9000;
+}
+
+server {
+	## Your website name goes here.
+	server_name domain.tld;
+	## Your only path reference.
+	root /var/www/wordpress;
+	## This should be in your http block and if it is, it's not needed here.
+	index index.php;
+
+	location = /favicon.ico {
+		log_not_found off;
+		access_log off;
+	}
+
+	location = /robots.txt {
+		allow all;
+		log_not_found off;
+		access_log off;
+	}
+
+	location / {
+		# This is cool because no php is touched for static content.
+		# include the "?$args" part so non-default permalinks doesn't break when using query string
+		try_files $uri $uri/ /index.php?$args;
+	}
+
+	location ~ \.php$ {
+		#NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+		include fastcgi.conf;
+		fastcgi_intercept_errors on;
+		fastcgi_pass php;
+		fastcgi_buffers 16 16k;
+		fastcgi_buffer_size 32k;
+	}
+
+	location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+		expires max;
+		log_not_found off;
+	}
+}
+</textarea>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="../js/web-server.min.js"></script>
+</body>
+</html>

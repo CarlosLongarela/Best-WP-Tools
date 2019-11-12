@@ -1,0 +1,8 @@
+{
+    "minify.js": {
+        "mangle": false,
+        "compress": {
+            /* "drop_console": true // DEBUG: SET in production */
+        }
+    }
+}

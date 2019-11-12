@@ -1,0 +1,22 @@
+{
+    "app_name": {
+      "message": "Best WordPress Tools",
+      "description": "Please, don't translate this variable message"
+    },
+    "app_description": {
+        "message": "Different utility tools for WordPress develeopers and end users",
+        "description": "Extension description"
+    },
+    "msg_only_http": {
+        "message": "Only https or http pages."
+    },
+    "msg_2_only_http": {
+        "message": "Click on this extension when you are on pages like"
+    },
+    "btn_pagespeed_insights": {
+        "message": "Measure with Google PageSpeed Insights"
+    },
+    "btn_geek_flare": {
+        "message": "Measure with Geek Flare"
+    }
+}

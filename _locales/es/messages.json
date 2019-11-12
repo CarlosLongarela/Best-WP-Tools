@@ -1,0 +1,231 @@
+{
+    "app_name": {
+      "message": "Best WordPress Tools",
+      "description": "Please, don't translate this variable message"
+    },
+    "app_description": {
+        "message": "Diferentes herramientas de utilidad para desarrolladores y usuarios de WordPress",
+        "description": "Extension description"
+    },
+    "plugin_info": {
+        "message": "Contáctenos en"
+    },
+    "msg_only_http": {
+        "message": "Sólo en páginas https o http."
+    },
+    "msg_domain": {
+        "message": "Dominio"
+    },
+    "msg_2_only_http": {
+        "message": "Haz Click en esta extensión cuando estés en páginas como"
+    },
+    "msg_medition_tools": {
+        "message": "Herramientas de medición/comprobación"
+    },
+    "btn_pagespeed_insights": {
+        "message": "Medir con Google PageSpeed Insights"
+    },
+    "btn_sucuri_sitecheck": {
+        "message": "Comprobar con Sucuri SiteCheck"
+    },
+    "btn_geek_flare": {
+        "message": "Medir con Geek Flare"
+    },
+    "btn_keycdn_url_speed": {
+        "message": "Medir con keycdn URL Speed"
+    },
+    "btn_sucuri_loadtimetester": {
+        "message": "Medir con Sucuri Loadtimetester"
+    },
+    "btn_byte_check": {
+        "message": "Medir con Byte Check"
+    },
+    "btn_http2_pro": {
+        "message": "Comprobar con HTTP2.Pro"
+    },
+    "btn_http2_geek_flare": {
+        "message": "Comprobar con Geek Flare"
+    },
+    "btn_pingdom_dns_health": {
+        "message": "Comprobar con Pingdom DNS Health"
+    },
+    "btn_mx_toolbox": {
+        "message": "Comprobar con MX Toolbox"
+    },
+    "btn_dns_checker": {
+        "message": "Comprobar con DNS Checker"
+    },
+    "btn_dns_checker_ipv6": {
+        "message": "Comprobar con DNS Checker y IPv6"
+    },
+    "btn_check_gzip_compression": {
+        "message": "Comprobar con Check GZIP compression"
+    },
+    "btn_mx_mx_toolbox": {
+        "message": "Comprobar registros MX con MX Toolbox"
+    },
+    "btn_smtp_mx_toolbox": {
+        "message": "Comprobar SMTP con MX Toolbox"
+    },
+    "btn_blacklist_mx_toolbox": {
+        "message": "Comprobar si está en una lista negra con MX Toolbox"
+    },
+    "btn_gsuite": {
+        "message": "Comprobar registros MX con GSuite"
+    },
+    "msg_other_wpo_links": {
+        "message": "Otras herramientas para medir el rendimiento pero que no aceptan el envío directo de la url por lo que tendrá que escribirla una vez esté en la página"
+    },
+    "msg_url": {
+        "message": "URL"
+    },
+    "msg_width_height": {
+        "message": "Dimensiones (ancho * alto)"
+    },
+    "msg_favicon": {
+        "message": "Icono del sitio web"
+    },
+    "msg_no_favicon": {
+        "message": "No se ha definido un icono del sitio web"
+    },
+    "msg_title": {
+        "message": "Título de la página"
+    },
+    "msg_incognito_yes": {
+        "message": "Se está mostrando en una ventana de incógnito"
+    },
+    "msg_incognito_no": {
+        "message": "No se está mostrando en una ventana de incógnito"
+    },
+    "msg_status": {
+        "message": "Estado"
+    },
+    "msg_https_on": {
+        "message": "Página segura (https)"
+    },
+    "msg_https_off": {
+        "message": "Página no segura (http)"
+    },
+    "msg_loading": {
+        "message": "Página cargando"
+    },
+    "msg_complete": {
+        "message": "Carga completa"
+    },
+    "msg_http_code": {
+        "message": "Código HTTP"
+    },
+    "msg_ip": {
+        "message": "IP"
+    },
+    "msg_dns_lookup": {
+        "message": "Búsqueda DNS"
+    },
+    "msg_connect_time": {
+        "message": "Tiempo de conexión"
+    },
+    "msg_pretransfer_time": {
+        "message": "Tiempo hasta antes del envío del primer byte"
+    },
+    "msg_starttransfer_time": {
+        "message": "Tiempo hasta el envío del primer byte"
+    },
+    "msg_total_time": {
+        "message": "Tiempo total"
+    },
+    "msg_compress": {
+        "message": "Contenido comprimido"
+    },
+    "msg_no": {
+        "message": "No"
+    },
+    "msg_yes": {
+        "message": "Yes"
+    },
+    "msg_headers": {
+        "message": "Cabeceras"
+    },
+    "msg_text_copy": {
+        "message": "Copiar texto al portapapeles"
+    },
+    "msg_text_copied": {
+        "message": "Texto copiado al portapapeles"
+    },
+    "msg_wp_tools_title": {
+        "message": "Opciones de configuración de WordPress"
+    },
+    "msg_wp_config_title": {
+        "message": "Opciones de wp-config.php"
+    },
+    "msg_security_keys": {
+        "message": "Claves de seguridad"
+    },
+    "msg_post_autosave": {
+        "message": "Autoguardado de posts"
+    },
+    "msg_cookie_domain": {
+        "message": "Dominio de las cookies"
+    },
+    "msg_post_revisions": {
+        "message": "Revisiones de posts"
+    },
+    "msg_post_30_sec": {
+        "message": "30 segundos"
+    },
+    "msg_post_60_sec": {
+        "message": "60 segundos (por defecto)"
+    },
+    "msg_post_90_sec": {
+        "message": "90 segundos"
+    },
+    "msg_post_2_min": {
+        "message": "2 minutos"
+    },
+    "msg_post_3_min": {
+        "message": "3 minutos"
+    },
+    "msg_post_4_min": {
+        "message": "4 mintos"
+    },
+    "msg_post_5_min": {
+        "message": "5 minutos"
+    },
+    "msg_revisions_true": {
+        "message": "Guardar revisiones de posts (por defecto)"
+    },
+    "msg_revisions_false": {
+        "message": "Desactivar las revisiones de posts"
+    },
+    "msg_revisions_1": {
+        "message": "Guardar 1 revisión de posts"
+    },
+    "msg_revisions_3": {
+        "message": "Guardar 3 revisiones de posts"
+    },
+    "msg_revisions_5": {
+        "message": "Guardar 5 revisiones de posts"
+    },
+    "msg_revisions_10": {
+        "message": "Guardar 10 revisiones de posts"
+    },
+    "msg_revisions_15": {
+        "message": "Guardar 15 revisiones de posts"
+    },
+    "msg_generate": {
+        "message": "Generar"
+    },
+    "msg_security": {
+        "message": "Seguridad"
+    },
+    "msg_generate_salt": {
+        "message": "Generar claves de seguridad para AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT y NONCE_SALT"
+    },
+    "msg_siteground_title": {
+        "message": "HOSTING WORDPRESS GESTIONADO EN TODOS LOS PLANES"
+    },
+    "msg_siteground_text": {
+        "message": "Para facilitarte los primeros pasos, te proporcionamos un instalador en 1 clic y una migración gratuita. Puedes contar con nosotros para conseguir las actualizaciones automáticas de WordPress y podrás gestionarlo fácilmente desde la línea de comandos con WP-CLI. Para conseguir velocidades de vértigo en WordPress, te ofrecemos SuperCacher en todos los planes a partir del StartUp. Los más frikis pueden utilizar el modo de ensayos en WP y la integración Git en nuestros planes dedicados, en la nube y GoGeek."
+    }
+}
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WPO</title>
+	<script src="../js/general.min.js"></script>
+	<link rel="stylesheet" href="../css/styles.css" type="text/css"></link>
+</head>
+<body id="total-wp-tools">
+
+	<div id="main">
+		<nav id="primary_menu"></nav>
+
+		<div id="data">
+			<h1>{{msg_medition_tools}}</h1>
+
+			<div id="notice"></div>
+
+			<div id="menu_wpo_tools">
+				<div id="section_wpo" class="item_wpo">WPO</div>
+				<div id="section_security" class="item_wpo">{{msg_security}}</div>
+				<div id="section_ttfb" class="item_wpo">TTFB</div>
+				<div id="section_http2" class="item_wpo">HTTP/2</div>
+				<div id="section_dns" class="item_wpo">DNS</div>
+				<div id="section_gzip" class="item_wpo">GZIP</div>
+				<div id="section_mail" class="item_wpo">MAIL</div>
+			</div>
+
+
+			<fieldset class="wpo_fieldset visible" id="target_section_wpo">
+				<legend>WPO</legend>
+				<input id="pagespeed_insights" type="button" class="btn full_width" value="{{btn_pagespeed_insights}}">
+				<input id="geek_flare" type="button" class="btn full_width" value="{{btn_geek_flare}}">
+
+				<p class="txt_notice">* {{msg_other_wpo_links}}</p>
+
+				<p class="list_item"><a class="btn_light" href="https://tools.pingdom.com/" target="_blank" rel="noopener noreferrer">Pingdom Website Speed Test</a></p>
+				<p class="list_item"><a class="btn_light" href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">GTMetrix</a></p>
+				<p class="list_item"><a class="btn_light" href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a></p>
+				<p class="list_item"><a class="btn_light" href="https://tools.keycdn.com/speed" target="_blank" rel="noopener noreferrer">keycdn Website Speed Test</a></p>
+			</fieldset>
+
+			<fieldset class="wpo_fieldset" id="target_section_security">
+					<legend>{{msg_security}}</legend>
+					<input id="sucuri_sitecheck" type="button" class="btn full_width" value="{{btn_sucuri_sitecheck}}">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset" id="target_section_ttfb">
+				<legend>TTFB (Time To First Byte)</legend>
+				<input id="keycdn_url_speed" type="button" class="btn full_width" value="{{btn_keycdn_url_speed}}">
+				<input id="sucuri_loadtimetester" type="button" class="btn full_width" value="{{btn_sucuri_loadtimetester}}">
+				<input id="byte_check" type="button" class="btn full_width" value="{{btn_byte_check}}">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset" id="target_section_http2">
+				<legend>HTTP/2</legend>
+				<input id="http2_pro" type="button" class="btn full_width" value="{{btn_http2_pro}}">
+				<input id="http2_geek_flare" type="button" class="btn full_width" value="{{btn_http2_geek_flare}}">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset" id="target_section_dns">
+				<legend>DNS</legend>
+				<input id="pingdom_dns_health" type="button" class="btn full_width" value="{{btn_pingdom_dns_health}}">
+				<input id="mx_toolbox" type="button" class="btn full_width" value="{{btn_mx_toolbox}}">
+				<input id="dns_checker" type="button" class="btn full_width" value="{{btn_dns_checker}}">
+				<input id="dns_checker_ipv6" type="button" class="btn full_width" value="{{btn_dns_checker_ipv6}}">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset" id="target_section_gzip">
+				<legend>Gzip</legend>
+				<input id="check_gzip_compression" type="button" class="btn full_width" value="{{btn_check_gzip_compression}}">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset" id="target_section_mail">
+				<legend>Mail</legend>
+				<input id="mx_mx_toolbox" type="button" class="btn full_width" value="{{btn_mx_mx_toolbox}}">
+				<input id="smtp_mx_toolbox" type="button" class="btn full_width" value="{{btn_smtp_mx_toolbox}}">
+				<input id="blacklist_mx_toolbox" type="button" class="btn full_width" value="{{btn_blacklist_mx_toolbox}}">
+				<input id="mx_gsuite" type="button" class="btn full_width" value="{{btn_gsuite}}">
+			</fieldset>
+
+		</div>
+	</div>
+
+	<script src="../js/wpo.min.js"></script>
+</body>
+</html>
