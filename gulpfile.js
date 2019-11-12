@@ -69,10 +69,10 @@ gulp.task( 'general-scss', function() {
 
 gulp.task( 'watch', function() {
 	// Inspect changes in ts files.
-	gulp.watch( AdminTS, gulp.series( 'general-scripts' ) );
+	//gulp.watch( GeneralTS, gulp.series( 'general-scripts' ) );
 
 	// Inspect changes in scss files.
-	gulp.watch( AdminSCSS, gulp.series( 'general-scss' ) );
+	gulp.watch( GeneralSCSS, gulp.series( 'general-scss' ) );
 } );
 
 gulp.task( 'default', gulp.parallel( 'watch' ) );

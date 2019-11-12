@@ -2,18 +2,19 @@
 	'use strict';
 
 	// Google Analytics.
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-74049753-5']);
-	_gaq.push(['_trackPageview']);
+	var _gaq = Array()
+	_gaq = _gaq || [];
+	_gaq.push( ['_setAccount', 'UA-74049753-5'] );
+	_gaq.push( ['_trackPageview'] );
 
-	(function() {
-		var ga   = document.createElement('script');
+	( function() {
+		var ga   = document.createElement( 'script' );
 		ga.type  = 'text/javascript';
 		ga.async = true;
 		ga.src   = 'https://ssl.google-analytics.com/ga.js';
-		var s    = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
+		var s    = document.getElementsByTagName( 'script' )[0];
+		s.parentNode.insertBefore( ga, s );
+	} )();
 
 }() );
 
@@ -34,7 +35,7 @@ var utils = {
 			length,
 			attrs_to_check = ['title', 'alt', 'placeholder', 'value', 'href'];
 
-		function replacer( text ) {
+		function replacer( text : string ) {
 			return text.replace(/\{\{([\s\S]*?)\}\}/gm, function( str, g1 ) {
 				return chrome.i18n.getMessage( g1.trim() ) || str;
 			});
@@ -57,7 +58,7 @@ var utils = {
 		}
 	}, // /translator.
 
-	ajax: function( url, fn ) {
+	ajax: function( url : string, fn ) {
 		'use strict';
 
 		var request = new XMLHttpRequest();
