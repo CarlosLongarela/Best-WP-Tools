@@ -1,25 +1,27 @@
 {
   "name": "cl-best-wp-tools",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Browser extension with WordPress Utils",
   "main": "gulpfile.js",
   "dependencies": {
-    "npm": "^6.11.3",
-    "typescript": "^3.6.3"
+    "npm": "^6.13.0",
+    "typescript": "^3.7.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "autoprefixer": "^9.6.1",
-    "gulp-concat": "^2.6.1",
+    "autoprefixer": "^9.7.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
+    "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-typescript": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "cssnano": "^4.1.10",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "@types/chrome": "0.0.91",
+    "@types/firefox": "0.0.29"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

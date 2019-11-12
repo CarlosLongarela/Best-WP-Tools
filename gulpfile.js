@@ -5,19 +5,19 @@ var gulp         = require( 'gulp' ),
 	autoprefixer = require( 'autoprefixer' ),
 	postcss      = require( 'gulp-postcss' ),
 	cssnano      = require( 'cssnano' ),
+	rename       = require( 'gulp-rename' ),
 	plumber      = require( 'gulp-plumber' ),
-	concat       = require( 'gulp-concat' ),
 	notify       = require( 'gulp-notify' ),
 	sourcemaps   = require( 'gulp-sourcemaps' );
 
 var tsconfig = require( './tsconfig.json' );
 
-var GeneralTS = [
-	'./__src/typescript/*.ts',
+var SourceTS = [
+	'__src/typescript/*.ts',
 ];
 
-var GeneralSCSS = [
-	'./__src/scss/style.scss',
+var SourceSCSS = [
+	'__src/scss/*.scss',
 ];
 
 var plugins = [
@@ -27,52 +27,50 @@ var plugins = [
 
 /** Js Tasks */
 gulp.task( 'general-scripts', function() {
-	var js_dest      = 'js/';
-	var js_post_name = '.min.js';
+	var js_dest = 'js';
 
-	return gulp.src( GeneralTS )
+	return gulp.src( SourceTS )
 		.pipe( ts( tsconfig.compilerOptions ) )
 		.pipe( sourcemaps.init() )
 		.pipe( sourcemaps.identityMap() )
 		.pipe( plumber() )
-		.pipe( concat( js_post_name ) )
 		.pipe( uglify() )
+		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( sourcemaps.write( './maps' ) )
 		.pipe( gulp.dest( js_dest ) )
 		.pipe( notify( {
-			title: 'Gulp ADMIN JS Task Result:',
-			message: 'Admin [/' + js_dest + '/' + js_post_name + '] created.',
+			title: 'Gulp TS Task Result:',
+			message: 'Files from [/' + SourceTS + '/] created in [/' + js_dest + '/].',
 			onLast: true
 		} ) );
 } );
 
 /** SCSS Tasks */
 gulp.task( 'general-scss', function() {
-	var css_dest      = 'css';
-	var css_post_name = '.min.css';
+	var css_dest = 'css';
 
-	return gulp.src( GeneralSCSS )
+	return gulp.src( SourceSCSS )
 		.pipe( sourcemaps.init() )
 		.pipe( sourcemaps.identityMap() )
 		.pipe( plumber() )
-		.pipe( concat( css_post_name ) )
 		.pipe( sass().on( 'error', sass.logError ) )
 		.pipe( postcss( plugins ) )
+		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( sourcemaps.write( './maps' ) )
 		.pipe( gulp.dest( css_dest ) )
 		.pipe( notify( {
-			title: 'Gulp ADMIN CSS Task Result:',
-			message: 'Admin [/' + css_dest + '/' + css_post_name + '] created.',
+			title: 'Gulp SCSS Task Result:',
+			message: 'Files from [/' + SourceSCSS + '/] created in [/' + css_dest + '/].',
 			onLast: true
 		} ) );
 } );
 
 gulp.task( 'watch', function() {
 	// Inspect changes in ts files.
-	//gulp.watch( GeneralTS, gulp.series( 'general-scripts' ) );
+	gulp.watch( SourceTS, gulp.series( 'general-scripts' ) );
 
 	// Inspect changes in scss files.
-	gulp.watch( GeneralSCSS, gulp.series( 'general-scss' ) );
+	gulp.watch( SourceSCSS, gulp.series( 'general-scss' ) );
 } );
 
 gulp.task( 'default', gulp.parallel( 'watch' ) );

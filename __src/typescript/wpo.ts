@@ -1,8 +1,8 @@
 document.addEventListener( 'DOMContentLoaded', function() {
 	'use strict';
 
-	var items_wpo    = document.getElementsByClassName( 'item_wpo' );
-	var fieldset_wpo = document.getElementsByClassName( 'wpo_fieldset' );
+	var items_wpo: any    = document.getElementsByClassName( 'item_wpo' );
+	var fieldset_wpo: any = document.getElementsByClassName( 'wpo_fieldset' );
 
 	function show_section_wpo() {
 		for ( var i = 0; i < fieldset_wpo.length; i++ ) {
@@ -11,7 +11,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		utils.show_div( 'target_' + this.id );
 	}
 
-	function show_tabs_buttons( tab ) {
+	function show_tabs_buttons( tab: any ) {
 		var current_url                  = tab.url;
 		var encoded_current_url          = encodeURI( current_url );
 		var current_domain               = utils.extract_hostname( current_url );

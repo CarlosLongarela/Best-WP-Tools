@@ -8,9 +8,8 @@
             "chrome": true
     },
     "extends": [
-        "eslint:recommended",
-		"wordpress"
-	],
+        "eslint:recommended"
+    ],
     "parserOptions": {
         "sourceType": "module"
     },

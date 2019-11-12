@@ -21,7 +21,7 @@
 /* eslint-disable no-unused-vars */
 var utils = {
 /* eslint-enable no-unused-vars */
-	translator: function( html ) {
+	translator: function( html: any ) {
 		'use strict';
 
 		/**
@@ -35,7 +35,7 @@ var utils = {
 			length,
 			attrs_to_check = ['title', 'alt', 'placeholder', 'value', 'href'];
 
-		function replacer( text : string ) {
+		function replacer( text: string ) {
 			return text.replace(/\{\{([\s\S]*?)\}\}/gm, function( str, g1 ) {
 				return chrome.i18n.getMessage( g1.trim() ) || str;
 			});
@@ -49,7 +49,7 @@ var utils = {
 			});
 		}
 
-		if ( html.nodeType === 3 ) { //text node
+		if ( 3 === html.nodeType ) { //text node
 			html.data = replacer( html.data );
 		} else {
 			for ( i = 0, length = html.childNodes.length; i < length; i++ ) {
@@ -58,7 +58,7 @@ var utils = {
 		}
 	}, // /translator.
 
-	ajax: function( url : string, fn ) {
+	ajax: function( url: string, fn: any ) {
 		'use strict';
 
 		var request = new XMLHttpRequest();
@@ -75,7 +75,7 @@ var utils = {
 		request.send();
 	}, // /ajax.
 
-	set_menu: function( active_item ) {
+	set_menu: function( active_item: string ): void {
 		'use strict';
 
 		var html_menu = '';
@@ -124,19 +124,19 @@ var utils = {
 		this.show_div( 'notice' );
 	}, // /url_not_valid.
 
-	show_div: function( div_id ) {
+	show_div: function( div_id: string ) {
 		'use strict';
 
 		document.getElementById( div_id ).style.display = 'block';
 	}, // /show_div.
 
-	hide_div: function( div_id ) {
+	hide_div: function( div_id: string ) {
 		'use strict';
 
 		document.getElementById( div_id ).style.display = 'none';
 	}, // /hide_div.
 
-	show_hide_div: function( div_id ) {
+	show_hide_div: function( div_id: string ) {
 		'use strict';
 
 		if ( document.getElementById( div_id ).style.display === 'none' ) {
@@ -151,10 +151,10 @@ var utils = {
 
 		data_style.height   = 'auto';
 		data_style.overflow = 'auto';
-		data_style.opacity  = 1;
+		data_style.opacity  = '1';
 	}, // /show_data_div.
 
-	copy_text: function( div_id ) {
+	copy_text: function( div_id: string ) {
 		'use strict';
 
 		var self = this;
@@ -172,7 +172,7 @@ var utils = {
 		}, 4000 );
 	}, // /copy_text.
 
-	extract_hostname: function( url ) {
+	extract_hostname: function( url: string ) {
 		'use strict';
 
 		var hostname;

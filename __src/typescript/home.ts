@@ -2,7 +2,7 @@
 document.addEventListener( 'DOMContentLoaded', function() {
 	'use strict';
 
-	function show_tab_data_home( tab ) {
+	function show_tab_data_home( tab: any ) {
 		var html, https_img, https_txt;
 
 		html = '';
@@ -46,7 +46,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		utils.ajax( 'https://tabernawp.com/wp-total-tools/api/?url=' + encodeURI( tab.url ), info_api_url );
 	}
 
-	function info_api_url( response ) {
+	function info_api_url( response: any ) {
 		var html;
 
 		html = '';
@@ -63,7 +63,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 				}
 
 				if ( response.namelookup_time  ) {
-					html += '<p>' + chrome.i18n.getMessage( 'msg_dns_lookup' ) + ': <strong>' + ( response.namelookup_time * 1000 ).toFixed(2)  + ' ms</strong></p>';
+					html += '<p>' + chrome.i18n.getMessage( 'msg_dns_lookup' ) + ': <strong>' + ( response.namelookup_time * 1000 ).toFixed(2) + ' ms</strong></p>';
 				}
 
 				if ( response.connect_time ) {
@@ -83,7 +83,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 				}
 
 				if ( response.compress ) {
-					html += '<p>' + chrome.i18n.getMessage( 'msg_compress' ) + ': <strong class="ok">' + response.compress  + '</strong></p>';
+					html += '<p>' + chrome.i18n.getMessage( 'msg_compress' ) + ': <strong class="ok">' + response.compress + '</strong></p>';
 				} else {
 					html += '<p>' + chrome.i18n.getMessage( 'msg_compress' ) + ': <span class="fail">' + chrome.i18n.getMessage( 'msg_no' ) + '</span></p>';
 				}
