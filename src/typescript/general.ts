@@ -105,7 +105,7 @@ var utils = {
 		var self = this;
 		chrome.tabs.query( { 'active': true, 'currentWindow': true }, function( tabs: any ) {
 			if ( tabs.length > 0 ) {
-				if ( tabs[0].url.substring( 0, 4 ) !== 'http' ) { // Url don't begin with http or https.
+				if ( 'http' !== tabs[0].url.substring( 0, 4 ) ) { // Url don't begin with http or https.
 					self.url_not_valid();
 				} else {
 					fn( tabs[0] );
@@ -119,7 +119,7 @@ var utils = {
 	url_not_valid: function() {
 		'use strict';
 
-		document.getElementById( 'data' ).innerHTML = '<div id="notice"><p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wp-tools/" target="_blank" rel="noopener">https://tabernawp.com/best-wp-tools/</a></p></div>';
+		document.getElementById( 'data' ).innerHTML = '<div id="notice"><p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">https://tabernawp.com/best-wordpress-tools</a></p></div>';
 
 		this.show_div( 'notice' );
 	}, // /url_not_valid.

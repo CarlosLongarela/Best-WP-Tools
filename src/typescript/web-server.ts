@@ -1,6 +1,9 @@
 document.addEventListener( 'DOMContentLoaded', function() {
 	'use strict';
 
+	utils.translator( document.body ); // Only if html page has body strings to translate.
+	//utils.translator( document.head ); // Only if html page has head strings to translate.
+
 	utils.set_menu( 'web-server' );
 
 	// Change from Apache to Nginx and viceversa.
@@ -11,7 +14,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		//console.log( 'Apache: ' + apache_div.style.display );
 		//console.log( 'Nginx: ' + nginx_div.style.display );
 
-		if ( nginx_div.style.display === 'none' ) {
+		if ( 'none' === nginx_div.style.display ) {
 			apache_div.style.display = 'none';
 			nginx_div.style.display = 'block';
 		} else {

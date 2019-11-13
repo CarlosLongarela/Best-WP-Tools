@@ -43,7 +43,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 		document.getElementById( 'url_info' ).innerHTML = html;
 
-		utils.ajax( 'https://tabernawp.com/wp-total-tools/api/?url=' + encodeURI( tab.url ), info_api_url );
+		utils.ajax( 'https://tabernawp.com/best-wp-tools/api/?url=' + encodeURI( tab.url ), info_api_url );
 	}
 
 	function info_api_url( response: any ) {
