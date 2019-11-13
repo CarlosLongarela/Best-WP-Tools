@@ -221,10 +221,16 @@
         "message": "Generar claves de seguridad para AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT y NONCE_SALT"
     },
     "msg_siteground_title": {
-        "message": "HOSTING WORDPRESS GESTIONADO EN TODOS LOS PLANES"
+        "message": "Hosting WordPress Gestionado"
     },
     "msg_siteground_text": {
-        "message": "Para facilitarte los primeros pasos, te proporcionamos un instalador en 1 clic y una migración gratuita. Puedes contar con nosotros para conseguir las actualizaciones automáticas de WordPress y podrás gestionarlo fácilmente desde la línea de comandos con WP-CLI. Para conseguir velocidades de vértigo en WordPress, te ofrecemos SuperCacher en todos los planes a partir del StartUp. Los más frikis pueden utilizar el modo de ensayos en WP y la integración Git en nuestros planes dedicados, en la nube y GoGeek."
+        "message": "Te recomendamos el hosting de SiteGround si deseas tener una web en WordPress o un comercio electrónico con WooCommerce, con todas las utilidades de un hosting gestionado, además de correo electrónico, gestión de dominios y otras utilidades incluidas en el plan, como por ejemplo las actualizaciones automáticas de WordPress y su gestión desde la línea de comandos con WP-CLI."
+    },
+    "msg_kinsta_title": {
+      "message": "Hosting WordPress en los servidores de Google"
+    },
+    "msg_kinsta_text": {
+      "message": "Kinsta está potenciado exclusivamente por el Google Cloud Platform y utiliza la red global de nivel Premium de Google Cloud, para asegurar que tus sitios se carguen aún más rápido. Kinsta está recomendado por Google Cloud como una solución para hosting de WordPress completamente administrada. Solución recomendada para obtener las máximas prestaciones de tu sitio web o tienda de comercio electrónico."
     }
 }
 

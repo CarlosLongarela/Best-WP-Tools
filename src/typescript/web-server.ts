@@ -24,13 +24,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	} );
 
 	// Click on copy icon.
-	document.getElementById( 'copy_apache' ).addEventListener( 'click', function() {
-		utils.copy_text( 'basic_apache' );
-	} );
+	var copy_btn = document.getElementsByClassName( 'copy_text' );
 
-	document.getElementById( 'copy_nginx' ).addEventListener( 'click', function() {
-		utils.copy_text( 'basic_nginx' );
-	} );
+	for ( var i = 0; i < copy_btn.length; i++ ) {
+		copy_btn[i].addEventListener( 'click', function() {
+			utils.copy_text( this.dataset.id2copy );
+		} );
+	}
 
 	utils.show_data_div(); // Show principal content.
 
