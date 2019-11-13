@@ -81,7 +81,7 @@ var utils = {
 		var html_menu = '';
 		var sections, sections_length;
 
-		sections = [ 'home', 'wpo', 'web-server', 'wp-tools', 'wp-plugins', 'wp-themes', 'hosting' ];
+		sections = [ 'home', 'wpo', 'web-server', 'wp-tools', 'wp-code', 'wp-plugins', 'wp-themes', 'hosting' ];
 		sections_length = sections.length;
 
 		if ( document.getElementById( 'primary_menu' ) ) {
