@@ -223,6 +223,18 @@
     "msg_siteground_title": {
         "message": "Hosting WordPress Gestionado"
     },
+    "msg_codeable_next_plugins": {
+      "message": "Aquí os iremos mostrando una selección de los mejores plugins utilizados personalmente y de probada eficacia y prestaciones."
+    },
+    "msg_codeable_next_themes": {
+      "message": "Aquí os iremos mostrando una selección de los mejores temas utilizados personalmente y de probada eficacia y prestaciones."
+    },
+    "msg_codeable_plugins": {
+        "message": "Tanto si necesitas modificar un plugin, como crear uno desde cero, añadirle funcionalidades a un plugin que utilizas o cualquier personalización imaginable, puedes contratar a los mejores programadores de WordPress en Codeable."
+    },
+    "msg_codeable_themes": {
+      "message": "Tanto si necesitas modificar un tema de WordPress, como crear uno desde cero, crear un tema hijo, añadirle funcionalidades a un tema que utilizas o cualquier personalización imaginable, puedes contratar a los mejores programadores de WordPress en Codeable."
+    },
     "msg_siteground_text": {
         "message": "Te recomendamos el hosting de SiteGround si deseas tener una web en WordPress o un comercio electrónico con WooCommerce, con todas las utilidades de un hosting gestionado, además de correo electrónico, gestión de dominios y otras utilidades incluidas en el plan, como por ejemplo las actualizaciones automáticas de WordPress y su gestión desde la línea de comandos con WP-CLI."
     },
