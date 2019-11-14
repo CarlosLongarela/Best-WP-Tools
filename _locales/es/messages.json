@@ -243,6 +243,90 @@
     },
     "msg_kinsta_text": {
       "message": "Kinsta está potenciado exclusivamente por el Google Cloud Platform y utiliza la red global de nivel Premium de Google Cloud, para asegurar que tus sitios se carguen aún más rápido. Kinsta está recomendado por Google Cloud como una solución para hosting de WordPress completamente administrada. Solución recomendada para obtener las máximas prestaciones de tu sitio web o tienda de comercio electrónico."
+    },
+    "msg_home": {
+      "message": "Inicio"
+    },
+    "msg_webservers": {
+      "message": "Servidor web"
+    },
+    "msg_webservers_software": {
+      "message": "Servidor web Apache/Nginx"
+    },
+    "msg_basic_htaccess": {
+      "message": "htaccess base de WordPress"
+    },
+    "msg_gzip": {
+      "message": "Compresión Gzip"
+    },
+    "msg_deflate": {
+      "message": "Compresión Deflate"
+    },
+    "msg_bad_bots": {
+      "message": "Bloquear de robots no deseables"
+    },
+    "msg_basic_nginx": {
+      "message": "Configuración básica de WordPress en Nginx"
+    },
+    "msg_code_utils": {
+      "message": "Utilidades de código para WordPress"
+    },
+    "msg_wp_utils": {
+      "message": "Utilidades WordPress"
+    },
+    "msg_other_utils": {
+      "message": "Otras utilidades"
+    },
+    "msg_config_generator": {
+      "message": "Generador wp-config.php"
+    },
+    "msg_code_generator": {
+      "message": "Generador de código WordPress"
+    },
+    "msg_wp_gear": {
+      "message": "Equipamiento WordPress"
+    },
+    "msg_admin_ref": {
+      "message": "Referencia WP Admin"
+    },
+    "msg_admin_color": {
+      "message": "Esquemas de color de WP Admin"
+    },
+    "msg_plugin_boilerplate": {
+      "message": "Generador de esqueleto de plugin WordPress"
+    },
+    "msg_coding_standards": {
+      "message": "Estándares de Código WordPress"
+    },
+    "msg_php_rules": {
+      "message": "Reglas WordPress PHP_CodeSniffer"
+    },
+    "msg_codepen": {
+      "message": "Codepen (editor online HTML/CSS/JS)"
+    },
+    "msg_regular_exp": {
+      "message": "Expresiones regulares"
+    },
+    "msg_charts_gen": {
+      "message": "Generador de esquemas online"
+    },
+    "msg_loren_gen": {
+      "message": "Generador Lorem Ipsum"
+    },
+    "msg_html_ref": {
+      "message": "Referencia HTML"
+    },
+    "msg_css_ref": {
+      "message": "Referencia CSS"
+    },
+    "msg_js_ref": {
+      "message": "Referencia JavaScript"
+    },
+    "msg_wp_plugins": {
+      "message": "Plugins WordPress"
+    },
+    "msg_wp_themes": {
+      "message": "Temas WordPress"
     }
 }
 
