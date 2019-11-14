@@ -4,19 +4,332 @@
       "description": "Please, don't translate this variable message"
     },
     "app_description": {
-        "message": "Different utility tools for WordPress develeopers and end users",
+        "message": "Different tools useful for WordPress developers and users",
         "description": "Extension description"
     },
+    "plugin_info": {
+        "message": "Contact us at"
+    },
     "msg_only_http": {
-        "message": "Only https or http pages."
+        "message": "Only in https or http pages."
+    },
+    "msg_domain": {
+        "message": "Domain"
     },
     "msg_2_only_http": {
         "message": "Click on this extension when you are on pages like"
     },
+    "msg_medition_tools": {
+        "message": "Measurement/checking tools"
+    },
     "btn_pagespeed_insights": {
         "message": "Measure with Google PageSpeed Insights"
     },
+    "btn_sucuri_sitecheck": {
+        "message": "Check with Sucuri SiteCheck"
+    },
     "btn_geek_flare": {
         "message": "Measure with Geek Flare"
+    },
+    "btn_keycdn_url_speed": {
+        "message": "Measure with keycdn URL Speed"
+    },
+    "btn_sucuri_loadtimetester": {
+        "message": "Measure with Sucuri Loadtimetester"
+    },
+    "btn_byte_check": {
+        "message": "Measure with Byte Check"
+    },
+    "btn_http2_pro": {
+        "message": "Check with HTTP2.Pro"
+    },
+    "btn_http2_geek_flare": {
+        "message": "Check with Geek Flare"
+    },
+    "btn_pingdom_dns_health": {
+        "message": "Check with Pingdom DNS Health"
+    },
+    "btn_mx_toolbox": {
+        "message": "Check with MX Toolbox"
+    },
+    "btn_dns_checker": {
+        "message": "Check with DNS Checker"
+    },
+    "btn_dns_checker_ipv6": {
+        "message": "Check with DNS Checker and IPv6"
+    },
+    "btn_check_gzip_compression": {
+        "message": "Check with Check GZIP compression"
+    },
+    "btn_mx_mx_toolbox": {
+        "message": "Check MX records with MX Toolbox"
+    },
+    "btn_smtp_mx_toolbox": {
+        "message": "Check SMTP with MX Toolbox"
+    },
+    "btn_blacklist_mx_toolbox": {
+        "message": "Check if you are blacklisted with MX Toolbox"
+    },
+    "btn_gsuite": {
+        "message": "Check MX records with GSuite"
+    },
+    "msg_other_wpo_links": {
+        "message": "Other tools to measure performance but do not accept the direct sending of the url so you will have to write it once it is on the page"
+    },
+    "msg_url": {
+        "message": "URL"
+    },
+    "msg_width_height": {
+        "message": "Dimensions (width * height)"
+    },
+    "msg_favicon": {
+        "message": "Website icon"
+    },
+    "msg_no_favicon": {
+        "message": "No website icon has been defined"
+    },
+    "msg_title": {
+        "message": "Page title"
+    },
+    "msg_incognito_yes": {
+        "message": "It's showing in an incognito window"
+    },
+    "msg_incognito_no": {
+        "message": "It's not showing up in an incognito window"
+    },
+    "msg_status": {
+        "message": "Status"
+    },
+    "msg_https_on": {
+        "message": "Secure page (https)"
+    },
+    "msg_https_off": {
+        "message": "Unsecured page (http)"
+    },
+    "msg_loading": {
+        "message": "Page loading"
+    },
+    "msg_complete": {
+        "message": "Load complete"
+    },
+    "msg_http_code": {
+        "message": "HTTP Code"
+    },
+    "msg_ip": {
+        "message": "IP"
+    },
+    "msg_dns_lookup": {
+        "message": "DNS search"
+    },
+    "msg_connect_time": {
+        "message": "Connection time"
+    },
+    "msg_pretransfer_time": {
+        "message": "Time before sending the first byte"
+    },
+    "msg_starttransfer_time": {
+        "message": "Time until the first byte is sent"
+    },
+    "msg_total_time": {
+        "message": "Total time"
+    },
+    "msg_compress": {
+        "message": "Compressed content"
+    },
+    "msg_no": {
+        "message": "No"
+    },
+    "msg_yes": {
+        "message": "Yes"
+    },
+    "msg_headers": {
+        "message": "Headers"
+    },
+    "msg_text_copy": {
+        "message": "Copy text to clipboard"
+    },
+    "msg_text_copied": {
+        "message": "Text copied to clipboard"
+    },
+    "msg_wp_tools_title": {
+        "message": "WordPress configuration options"
+    },
+    "msg_wp_config_title": {
+        "message": "Options for wp-config.php"
+    },
+    "msg_security_keys": {
+        "message": "Security Keys"
+    },
+    "msg_post_autosave": {
+        "message": "AutoSave posts"
+    },
+    "msg_cookie_domain": {
+        "message": "Mastery of cookies"
+    },
+    "msg_post_revisions": {
+        "message": "Post reviews"
+    },
+    "msg_post_30_sec": {
+        "message": "30 seconds"
+    },
+    "msg_post_60_sec": {
+        "message": "60 seconds (default)"
+    },
+    "msg_post_90_sec": {
+        "message": "90 seconds"
+    },
+    "msg_post_2_min": {
+        "message": "2 minutes"
+    },
+    "msg_post_3_min": {
+      "message": "3 minutes"
+    },
+    "msg_post_4_min": {
+        "message": "4 mintos"
+    },
+    "msg_post_5_min": {
+        "message": "5 minutes"
+    },
+    "msg_revisions_true": {
+        "message": "Save post revisions (default)"
+    },
+    "msg_revisions_false": {
+        "message": "Disable post revisions"
+    },
+    "msg_revisions_1": {
+        "message": "Save 1 post revision"
+    },
+    "msg_revisions_3": {
+        "message": "Save 3 revisions of posts"
+    },
+    "msg_revisions_5": {
+        "message": "Save 5 revisions of posts"
+    },
+    "msg_revisions_10": {
+        "message": "Save 10 revisions of posts"
+    },
+    "msg_revisions_15": {
+        "message": "Save 15 revisions of posts"
+    },
+    "msg_generate": {
+        "message": "Generate"
+    },
+    "msg_security": {
+        "message": "Security"
+    },
+    "msg_generate_salt": {
+        "message": "Generate security keys for AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT and NONCE_SALT"
+    },
+    "msg_siteground_title": {
+        "message": "Hosting WordPress Managed"
+    },
+    "msg_codeable_next_plugins": {
+      "message": "Here we will show you a selection of the best plugins used personally and of proven efficiency and performance."
+    },
+    "msg_codeable_next_themes": {
+      "message": "Here we will show you a selection of the best themes used personally and of proven efficiency and performance."
+    },
+    "msg_codeable_plugins": {
+        "message": "Whether you need to modify a plugin, create one from scratch, add functionalities to a plugin you use or any customization imaginable, you can hire the best WordPress programmers at Codeable."
+    },
+    "msg_codeable_themes": {
+      "message": "Whether you need to modify a WordPress theme, create one from scratch, create a child theme, add functionality to a theme you use or any customization imaginable, you can hire the best WordPress programmers at Codeable."
+    },
+    "msg_siteground_text": {
+        "message": "We recommend hosting SiteGround if you want to have a web in WordPress or an e-commerce with WooCommerce, with all the utilities of a managed hosting, in addition to email, domain management and other utilities included in the plan, such as automatic updates of WordPress and its management from the command line with WP-CLI"
+    },
+    "msg_kinsta_title": {
+      "message": "Hosting WordPress on Google servers"
+    },
+    "msg_kinsta_text": {
+      "message": "Kinsta is powered exclusively by the Google Cloud Platform and uses Google Cloud's premium global network to ensure your sites load even faster. Kinsta is recommended by the Google Cloud as a fully managed WordPress hosting solution. Recommended solution to get the most out of your website or e-commerce store."
+    },
+    "msg_home": {
+      "message": "Home"
+    },
+    "msg_webservers": {
+      "message": "Web server"
+    },
+    "msg_webservers_software": {
+      "message": "Apache/Nginx web server"
+    },
+    "msg_basic_htaccess": {
+      "message": "htaccess WordPress base"
+    },
+    "msg_gzip": {
+      "message": "Gzip compression"
+    },
+    "msg_deflate": {
+      "message": "Compression Deflate"
+    },
+    "msg_bad_bots": {
+      "message": "Block undesirable robots"
+    },
+    "msg_basic_nginx": {
+      "message": "Basic configuration of WordPress in Nginx"
+    },
+    "msg_code_utils": {
+      "message": "WordPress code utilities"
+    },
+    "msg_wp_utils": {
+      "message": "WordPress Utilities"
+    },
+    "msg_other_utils": {
+      "message": "Other utilities"
+    },
+    "msg_config_generator": {
+      "message": "Generator wp-config.php"
+    },
+    "msg_code_generator": {
+      "message": "WordPress code generator"
+    },
+    "msg_wp_gear": {
+      "message": "WordPress equipment"
+    },
+    "msg_admin_ref": {
+      "message": "Reference WP Admin"
+    },
+    "msg_admin_color": {
+      "message": "WP Admin color schemes"
+    },
+    "msg_plugin_boilerplate": {
+      "message": "WordPress plugin skeleton generator"
+    },
+    "msg_coding_standards": {
+      "message": "WordPress Code Standards"
+    },
+    "msg_php_rules": {
+      "message": "WordPress PHP_CodeSniffer Rules"
+    },
+    "msg_codepen": {
+      "message": "Codepen (online editor HTML/CSS/JS)"
+    },
+    "msg_regular_exp": {
+      "message": "Regular expressions"
+    },
+    "msg_charts_gen": {
+      "message": "Online schema generator"
+    },
+    "msg_loren_gen": {
+      "message": "Generator Lorem Ipsum"
+    },
+    "msg_html_ref": {
+      "message": "HTML reference"
+    },
+    "msg_css_ref": {
+      "message": "CSS Reference"
+    },
+    "msg_js_ref": {
+      "message": "JavaScript Reference"
+    },
+    "msg_wp_plugins": {
+      "message": "WordPress Plugins"
+    },
+    "msg_wp_themes": {
+      "message": "WordPress Themes"
     }
 }
+
+
+
+
