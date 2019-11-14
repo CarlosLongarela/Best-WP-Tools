@@ -185,7 +185,7 @@
         "message": "3 minutos"
     },
     "msg_post_4_min": {
-        "message": "4 mintos"
+        "message": "4 minutos"
     },
     "msg_post_5_min": {
         "message": "5 minutos"
@@ -263,7 +263,7 @@
       "message": "Compresión Deflate"
     },
     "msg_bad_bots": {
-      "message": "Bloquear de robots no deseables"
+      "message": "Bloquear robots no deseables"
     },
     "msg_basic_nginx": {
       "message": "Configuración básica de WordPress en Nginx"

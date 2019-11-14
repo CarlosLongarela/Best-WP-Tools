@@ -164,7 +164,7 @@
         "message": "AutoSave posts"
     },
     "msg_cookie_domain": {
-        "message": "Mastery of cookies"
+        "message": "Domain of cookies"
     },
     "msg_post_revisions": {
         "message": "Post reviews"
@@ -185,7 +185,7 @@
       "message": "3 minutes"
     },
     "msg_post_4_min": {
-        "message": "4 mintos"
+        "message": "4 minutes"
     },
     "msg_post_5_min": {
         "message": "5 minutes"
@@ -221,7 +221,7 @@
         "message": "Generate security keys for AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT and NONCE_SALT"
     },
     "msg_siteground_title": {
-        "message": "Hosting WordPress Managed"
+        "message": "Managed WordPress Hosting"
     },
     "msg_codeable_next_plugins": {
       "message": "Here we will show you a selection of the best plugins used personally and of proven efficiency and performance."
@@ -230,16 +230,16 @@
       "message": "Here we will show you a selection of the best themes used personally and of proven efficiency and performance."
     },
     "msg_codeable_plugins": {
-        "message": "Whether you need to modify a plugin, create one from scratch, add functionalities to a plugin you use or any customization imaginable, you can hire the best WordPress programmers at Codeable."
+        "message": "Whether you need to modify a plugin, create one from scratch, add functionalities to a plugin you use or any imaginable customization, you can hire the best WordPress programmers at Codeable."
     },
     "msg_codeable_themes": {
-      "message": "Whether you need to modify a WordPress theme, create one from scratch, create a child theme, add functionality to a theme you use or any customization imaginable, you can hire the best WordPress programmers at Codeable."
+      "message": "Whether you need to modify a WordPress theme, create one from scratch, create a child theme, add functionality to a theme you use or any imaginable customization, you can hire the best WordPress programmers at Codeable."
     },
     "msg_siteground_text": {
-        "message": "We recommend hosting SiteGround if you want to have a web in WordPress or an e-commerce with WooCommerce, with all the utilities of a managed hosting, in addition to email, domain management and other utilities included in the plan, such as automatic updates of WordPress and its management from the command line with WP-CLI"
+        "message": "We recommend SiteGround hosting if you want to have a web in WordPress or an e-commerce with WooCommerce, with all the utilities of a managed hosting, in addition to email, domain management and other utilities included in the plan, such as automatic updates of WordPress and its management from the command line with WP-CLI"
     },
     "msg_kinsta_title": {
-      "message": "Hosting WordPress on Google servers"
+      "message": "Hosting WordPress on Google Servers"
     },
     "msg_kinsta_text": {
       "message": "Kinsta is powered exclusively by the Google Cloud Platform and uses Google Cloud's premium global network to ensure your sites load even faster. Kinsta is recommended by the Google Cloud as a fully managed WordPress hosting solution. Recommended solution to get the most out of your website or e-commerce store."
@@ -263,7 +263,7 @@
       "message": "Compression Deflate"
     },
     "msg_bad_bots": {
-      "message": "Block undesirable robots"
+      "message": "Block Bad bots"
     },
     "msg_basic_nginx": {
       "message": "Basic configuration of WordPress in Nginx"
@@ -284,13 +284,13 @@
       "message": "WordPress code generator"
     },
     "msg_wp_gear": {
-      "message": "WordPress equipment"
+      "message": "WordPress Gear"
     },
     "msg_admin_ref": {
       "message": "Reference WP Admin"
     },
     "msg_admin_color": {
-      "message": "WP Admin color schemes"
+      "message": "WP Admin Color Schemes"
     },
     "msg_plugin_boilerplate": {
       "message": "WordPress plugin skeleton generator"
@@ -308,13 +308,13 @@
       "message": "Regular expressions"
     },
     "msg_charts_gen": {
-      "message": "Online schema generator"
+      "message": "Online Chart Generator"
     },
     "msg_loren_gen": {
-      "message": "Generator Lorem Ipsum"
+      "message": "Lorem Ipsum Generator"
     },
     "msg_html_ref": {
-      "message": "HTML reference"
+      "message": "HTML Reference"
     },
     "msg_css_ref": {
       "message": "CSS Reference"
