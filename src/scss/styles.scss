@@ -22,9 +22,10 @@ body {
 	font-size: 1em;
 	/*background-image: radial-gradient(circle at 50% 35%, #ffffff, #dddddd);*/
 	margin: 0;
-	/*transition: all 2s;*/
 	user-select: none;
 	/*border: 1px solid red;*/
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 h1 {
@@ -156,7 +157,7 @@ fieldset {
 	height: 0;
 	overflow: hidden;
 	opacity: 0;
-	transition: all 1s linear;
+	transition: opacity 1s linear;
 }
 
 #primary_menu {
@@ -431,8 +432,6 @@ textarea.code {
 	right: 0;
 	bottom: 0;
 	background-color: $colorApache;
-	-webkit-transition: .4s;
-	transition: .4s;
 
 	&:before {
 		position: absolute;
@@ -442,8 +441,6 @@ textarea.code {
 		left: 4px;
 		bottom: 4px;
 		background-color: white;
-		-webkit-transition: .4s;
-		transition: .4s;
 	  }
   }
 
