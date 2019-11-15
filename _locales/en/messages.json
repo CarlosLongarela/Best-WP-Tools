@@ -223,11 +223,11 @@
     "msg_siteground_title": {
         "message": "Managed WordPress Hosting"
     },
-    "msg_codeable_next_plugins": {
-      "message": "Here we will show you a selection of the best plugins used personally and of proven efficiency and performance."
+    "msg_next_plugins": {
+      "message": "Here we will show you a selection of the best plugins used personally and of proven efficiency and performance. Some of the links shown here are affiliate links, but they will always be products used personally, we will never recommend products that we do not use and we are totally convinced of their proven effectiveness."
     },
-    "msg_codeable_next_themes": {
-      "message": "Here we will show you a selection of the best themes used personally and of proven efficiency and performance."
+    "msg_next_themes": {
+      "message": "Here we will show you a selection of the best themes used personally and of proven efficiency and performance. Some of the links shown here are affiliate links, but they will always be products used personally, we will never recommend products that we do not use and we are totally convinced of their proven effectiveness."
     },
     "msg_codeable_plugins": {
         "message": "Whether you need to modify a plugin, create one from scratch, add functionalities to a plugin you use or any imaginable customization, you can hire the best WordPress programmers at Codeable."
@@ -327,6 +327,12 @@
     },
     "msg_wp_themes": {
       "message": "WordPress Themes"
+    },
+    "msg_divi_themes": {
+      "message": "You've never built a WordPress website like this before. Divi is more than just a WordPress theme, it's a completely new website building platform that replaces the standard WordPress post editor with a vastly superior visual editor."
+    },
+    "msg_bloom_plugins": {
+      "message": "Convert Visitors Into Loyal Followers. Bloom gives you all the tools you need to turn your website's visitors into loyal followers and customers. Not only is Bloom going to convert extremely well, it's going to look great doing it."
     }
 }
 

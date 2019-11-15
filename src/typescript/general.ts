@@ -75,6 +75,18 @@ var utils = {
 		request.send();
 	}, // /ajax.
 
+	create: function( htmlStr: string ) {
+		var frag = document.createDocumentFragment(),
+			temp = document.createElement( 'div' );
+
+		temp.innerHTML = htmlStr;
+
+		while ( temp.firstChild ) {
+			frag.appendChild( temp.firstChild );
+		}
+		return frag;
+	}, // /create.
+
 	set_menu: function( active_item: string ): void {
 		'use strict';
 
@@ -93,7 +105,8 @@ var utils = {
 				}
 			}
 
-			document.getElementById( 'primary_menu' ).innerHTML = html_menu;
+			var fragment = this.create( html_menu );
+			document.getElementById( 'primary_menu' ).appendChild( fragment );
 		} else {
 			return null;
 		}
@@ -119,8 +132,13 @@ var utils = {
 	url_not_valid: function() {
 		'use strict';
 
-		document.getElementById( 'data' ).innerHTML = '<div id="notice"><p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">https://tabernawp.com/best-wordpress-tools</a></p></div>';
+		var fragment = this.create( '<p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">https://tabernawp.com/best-wordpress-tools</a></p>' );
 
+		console.log( fragment );
+
+		document.getElementById( 'notice' ).appendChild( fragment );
+
+		this.hide_div( 'app_info' );
 		this.show_div( 'notice' );
 	}, // /url_not_valid.
 
@@ -164,7 +182,7 @@ var utils = {
 
 		document.execCommand( 'copy' );
 
-		document.getElementById( 'notice' ).innerHTML = chrome.i18n.getMessage( 'msg_text_copied' );
+		document.getElementById( 'notice' ).textContent = chrome.i18n.getMessage( 'msg_text_copied' );
 		this.show_div( 'notice' );
 
 		setTimeout( function() {

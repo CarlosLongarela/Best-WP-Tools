@@ -41,7 +41,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 		html += '<p>' + chrome.i18n.getMessage( 'msg_domain' ) + ': <strong>' + utils.extract_hostname( tab.url ) + '</strong></p>';
 
-		document.getElementById( 'url_info' ).innerHTML = html;
+		var fragment = utils.create( html );
+		document.getElementById( 'url_info' ).appendChild( fragment );
 
 		utils.ajax( 'https://tabernawp.com/best-wp-tools/api/?url=' + encodeURI( tab.url ), info_api_url );
 	}
@@ -63,7 +64,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 				}
 
 				if ( response.namelookup_time  ) {
-					html += '<p>' + chrome.i18n.getMessage( 'msg_dns_lookup' ) + ': <strong>' + ( response.namelookup_time * 1000 ).toFixed(2) + ' ms</strong></p>';
+					html += '<p>' + chrome.i18n.getMessage( 'msg_dns_lookup' ) + ': <strong>' + ( response.namelookup_time * 1000 ).toFixed( 2 ) + ' ms</strong></p>';
 				}
 
 				if ( response.connect_time ) {
@@ -97,7 +98,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 			}
 		}
 
-		document.getElementById( 'api_url_info' ).innerHTML = html;
+		var fragment = utils.create( html );
+		document.getElementById( 'api_url_info' ).appendChild( fragment );
 	}
 
 	utils.translator( document.body ); // Only if html page has body strings to translate.

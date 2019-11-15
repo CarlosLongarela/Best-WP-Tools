@@ -7,3 +7,10 @@
 * We'll execute `$ npm audit` for view vulnerabilities problems and
 * `$ npm audit fix` for fix them
 
+## Tooltips
+```
+<div class="tooltip">Hover over me
+<span class="tooltiptext">This is a tooltip for short texts</span>
+</div>
+```
+

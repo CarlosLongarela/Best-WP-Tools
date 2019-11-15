@@ -223,11 +223,11 @@
     "msg_siteground_title": {
         "message": "Hosting WordPress Gestionado"
     },
-    "msg_codeable_next_plugins": {
-      "message": "Aquí os iremos mostrando una selección de los mejores plugins utilizados personalmente y de probada eficacia y prestaciones."
+    "msg_next_plugins": {
+      "message": "Aquí os iremos mostrando una selección de los mejores plugins utilizados personalmente y de probada eficacia y prestaciones. Algunos de los enlaces aquí mostrados son enlaces de afiliciación, pero siempre serán productos usados personalmente, nunca recomendaremos productos que no usemos y estemos totalmente convencidos de su probada eficacia."
     },
-    "msg_codeable_next_themes": {
-      "message": "Aquí os iremos mostrando una selección de los mejores temas utilizados personalmente y de probada eficacia y prestaciones."
+    "msg_next_themes": {
+      "message": "Aquí os iremos mostrando una selección de los mejores temas utilizados personalmente y de probada eficacia y prestaciones. Algunos de los enlaces aquí mostrados son enlaces de afiliciación, pero siempre serán productos usados personalmente, nunca recomendaremos productos que no usemos y estemos totalmente convencidos de su probada eficacia."
     },
     "msg_codeable_plugins": {
         "message": "Tanto si necesitas modificar un plugin, como crear uno desde cero, añadirle funcionalidades a un plugin que utilizas o cualquier personalización imaginable, puedes contratar a los mejores programadores de WordPress en Codeable."
@@ -327,6 +327,12 @@
     },
     "msg_wp_themes": {
       "message": "Temas WordPress"
+    },
+    "msg_divi_themes": {
+      "message": "Nunca has creado un sitio web de WordPress así hasta ahora. Divi es más que un tema de WordPress, es una plataforma de construcción de sitios web completamente nueva que reemplaza el editor de entradas estándar de WordPress con un editor visual muy superior."
+    },
+    "msg_bloom_plugins": {
+      "message": "Convierte a los visitantes en fieles seguidores. Bloom te ofrece todas las herramientas que necesitas para convertir a los visitantes de tu sitio web en fieles seguidores y clientes. Bloom no sólo se va a convierte muy bien, sino que también tiene un magnífica apariencia."
     }
 }
 
