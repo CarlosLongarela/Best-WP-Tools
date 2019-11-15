@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_app_name__",
   "description" : "__MSG_app_description__",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "default_locale": "en",
 
   "icons": {
@@ -23,7 +23,6 @@
     "tabs",
     "storage",
     "activeTab",
-    "debugger",
     "https://tabernawp.com/"
   ]
 
