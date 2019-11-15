@@ -16,7 +16,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		}
 
 		if ( tab.favIconUrl ) {
-			html += '<p><img class="favicon" src="' + tab.favIconUrl + '" /> ' + chrome.i18n.getMessage( 'msg_favicon' ) + ': <em class="url">' + tab.favIconUrl + '</em></p>';
+			if ( 'data:image' === tab.favIconUrl.substring( 0, 10 ) ) {
+				html += '<p><img class="favicon" src="' + tab.favIconUrl + '" /> ' + chrome.i18n.getMessage( 'msg_favicon' ) + '</p>';
+			} else {
+				html += '<p><img class="favicon" src="' + tab.favIconUrl + '" /> ' + chrome.i18n.getMessage( 'msg_favicon' ) + ': <em class="url">' + tab.favIconUrl + '</em></p>';
+			}
 		} else {
 			html += '<p class="fail">' + chrome.i18n.getMessage( 'msg_no_favicon' ) + '</p>';
 		}
