@@ -333,6 +333,9 @@
     },
     "msg_bloom_plugins": {
       "message": "Convierte a los visitantes en fieles seguidores. Bloom te ofrece todas las herramientas que necesitas para convertir a los visitantes de tu sitio web en fieles seguidores y clientes. Bloom no sólo se va a convierte muy bien, sino que también tiene un magnífica apariencia."
+    },
+    "msg_elementor_plugins": {
+      "message": "El Constructor de Páginas de WordPress líder en el mundo. Diseño de Pixel Perfect en WordPress. La única plataforma de diseño completa que ofrece un diseño perfecto de píxeles, pero que produce un código 100% limpio."
     }
 }
 
