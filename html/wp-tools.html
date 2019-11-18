@@ -71,6 +71,28 @@
 
 				<input type="text" class="code" readonly id="post_revisions_text" value="define( 'WP_POST_REVISIONS', true );">
 			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{{msg_ssl_login}}</legend>
+
+				<select name="ssl_login" id="ssl_login">
+					<option value="false" selected>{{msg_no}}</option>
+					<option value="true" >{{msg_yes}}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_ssl_login" value="define( 'FORCE_SSL_LOGIN', false );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{{msg_ssl_admin}}</legend>
+
+				<select name="ssl_admin" id="ssl_admin">
+					<option value="false" selected>{{msg_no}}</option>
+					<option value="true" >{{msg_yes}}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_ssl_admin" value="define( 'FORCE_SSL_ADMIN', false );">
+			</fieldset>
 		</div>
 	</div>
 

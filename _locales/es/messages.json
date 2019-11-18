@@ -140,7 +140,7 @@
         "message": "No"
     },
     "msg_yes": {
-        "message": "Yes"
+        "message": "Si"
     },
     "msg_headers": {
         "message": "Cabeceras"
@@ -336,6 +336,12 @@
     },
     "msg_elementor_plugins": {
       "message": "El Constructor de Páginas de WordPress líder en el mundo. Diseño de Pixel Perfect en WordPress. La única plataforma de diseño completa que ofrece un diseño perfecto de píxeles, pero que produce un código 100% limpio."
+    },
+    "msg_ssl_login": {
+      "message": "Forzar HTTPS en la página de autenticación"
+    },
+    "msg_ssl_admin": {
+      "message": "Forzar HTTPS en las páginas de administración"
     }
 }
 

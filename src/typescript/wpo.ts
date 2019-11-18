@@ -1,13 +1,23 @@
 document.addEventListener( 'DOMContentLoaded', function() {
 	'use strict';
 
-	var items_wpo: any    = document.getElementsByClassName( 'item_wpo' );
-	var fieldset_wpo: any = document.getElementsByClassName( 'wpo_fieldset' );
+	var items_wpo: any   = document.getElementsByClassName( 'item_wpo' );
+	var active_tabs: any = document.getElementsByClassName( 'item_wpo active_tab' );
+	var tab_wpo: any     = document.getElementsByClassName( 'wpo_tab' );
 
 	function show_section_wpo() {
-		for ( var i = 0; i < fieldset_wpo.length; i++ ) {
-			fieldset_wpo[i].style.display = 'none';
+		var active_tab = document.getElementById( this.id );
+
+		while ( active_tabs[0] ) {
+			active_tabs[0].classList.remove( 'active_tab' );
 		}
+
+		for ( var i = 0; i < tab_wpo.length; i++ ) {
+			tab_wpo[i].style.display = 'none';
+		}
+
+		active_tab.classList.add( 'active_tab' );
+
 		utils.show_div( 'target_' + this.id );
 	}
 

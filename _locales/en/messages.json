@@ -336,8 +336,13 @@
     },
     "msg_elementor_plugins": {
       "message": "The World's Leading WordPress Page Builder. Pixel Perfect Design in WordPress. The only complete design platform to offer pixel perfect design, yet produces 100% clean code."
+    },
+    "msg_ssl_login": {
+      "message": "Force HTTPS on login page"
+    },
+    "msg_ssl_admin": {
+      "message": "Force HTTPS on admin pages"
     }
-
 }
 
 
