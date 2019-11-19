@@ -61,7 +61,7 @@
 			
 			<div id="apache_div" style="display:block">
 
-				<h4>{{msg_basic_htaccess}}</h4>
+				<h2 class="title_textarea">{{msg_basic_htaccess}}</h2>
 				<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="basic_apache" title="{{msg_text_copy}}" />
 <textarea id="basic_apache" class="code" readonly>
 # BEGIN WordPress
@@ -73,10 +73,9 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.php [L]
 </IfModule>
-# END WordPress
-</textarea>
+# END WordPress</textarea>
 
-				<h4>{{msg_gzip}}</h4>
+				<h2 class="title_textarea">{{msg_gzip}}</h2>
 				<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="gzip_apache" title="{{msg_text_copy}}" />
 <textarea id="gzip_apache" class="code" readonly>
 <ifModule mod_gzip.c>
@@ -88,10 +87,9 @@
     mod_gzip_item_include mime ^application/x-javascript.*
     mod_gzip_item_exclude mime ^image/.*
     mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
-</ifModule>
-</textarea>
+</ifModule></textarea>
 
-				<h4>{{msg_deflate}}</h4>
+				<h2 class="title_textarea">{{msg_deflate}}</h2>
 				<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="deflate_apache" title="{{msg_text_copy}}" />
 <textarea id="deflate_apache" class="code" readonly>
 AddOutputFilterByType DEFLATE text/plain
@@ -102,10 +100,9 @@ AddOutputFilterByType DEFLATE application/xml
 AddOutputFilterByType DEFLATE application/xhtml+xml
 AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
-</textarea>
+AddOutputFilterByType DEFLATE application/x-javascript</textarea>
 
-			<h4>{{msg_bad_bots}}</h4>
+			<h2 class="title_textarea">{{msg_bad_bots}}</h2>
 			<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="bad_bots_apache" title="{{msg_text_copy}}" />
 <textarea id="bad_bots_apache" class="code" readonly>
 # Bot Block #
@@ -694,7 +691,7 @@ RewriteRule .* - [F]</textarea>
 
 			
 			<div id="nginx_div" style="display:none">
-					<h4>{{msg_basic_nginx}}</h4>
+					<h2 class="title_textarea">{{msg_basic_nginx}}</h2>
 					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="basic_nginx" title="{{msg_text_copy}}" />
 <textarea id="basic_nginx" class="code" readonly>
 # WordPress single site rules.
@@ -708,7 +705,7 @@ location / {
 }
 </textarea>
 
-					<h4>{{msg_gzip}}</h4>
+					<h2 class="title_textarea">{{msg_gzip}}</h2>
 					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="gzip_nginx" title="{{msg_text_copy}}" />
 <textarea id="gzip_nginx" class="code" readonly>
 gzip on;

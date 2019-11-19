@@ -408,6 +408,17 @@ fieldset {
 	text-align: center;
 }
 
+.title_textarea {
+	max-width: 90%;
+	float: left;
+	margin-top: 1em;
+	margin-bottom: 5px;
+}
+
+.icon_copy {
+	margin-top: 2em;
+}
+
 .code {
 	margin: auto;
 	font-family: Consolas, Monaco, "Courier New", Courier, monospace;
@@ -424,7 +435,8 @@ fieldset {
 }
 
 textarea.code {
-	min-height: 200px;
+	min-height: 12em;
+	resize: vertical;
 }
 
 .icon_copy {
