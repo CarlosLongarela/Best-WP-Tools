@@ -267,7 +267,6 @@ fieldset {
 
 	border: none;
 	border-radius: 6px;
-	box-shadow: 0px 1px 3px #666666;
 	font-weight: 600;
 	padding: 10px 15px;
 	text-decoration: none;
@@ -280,6 +279,7 @@ fieldset {
 	&.btn_green {
 		background: $btnBGColorNormalDark;
 		color: $textLight;
+		box-shadow: 0px 1px 3px #666666;
 
 		&:hover {
 			background: $btnBGColorNormalLight;
@@ -294,6 +294,23 @@ fieldset {
 		&:hover {
 			border: 3px solid $wpOrange;
 			color: $wpOrange;
+		}
+	}
+
+	&.btn_border_more {
+		border: 2px solid $wpBlue;
+		padding: 5px 10px;
+		font-weight: 300;
+		font-size: 90%;
+		height: 1.2em;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+
+		&:hover {
+			border: 2px solid $wpOrange;
+			color: $wpOrange;
+			background-color: $textLight;
 		}
 	}
 
