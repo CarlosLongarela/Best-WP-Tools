@@ -342,6 +342,12 @@
     },
     "msg_ssl_admin": {
       "message": "Forzar HTTPS en las páginas de administración"
+    },
+    "msg_flywheel_title": {
+      "message": "Fantástico hosting de WordPress gestionado"
+    },
+    "msg_flywheel_text": {
+      "message": "Cualquiera que sea tu entorno de trabajo, la potente plataforma WordPress de Flywheel elimina todas las molestias del alojamiento, agiliza tus procesos y te permite volver a hacer tu mejor trabajo."
     }
 }
 
