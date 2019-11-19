@@ -1,0 +1,83 @@
+{% set page_title = "WP Tools" -%}
+{% set section = "wp-tools" -%}
+
+{% include "partials/header.njk" %}
+
+			<h1>{% raw %}{{msg_wp_tools_title}}{% endraw %}</h1>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_security_keys}}{% endraw %}</legend> {# https://jsfiddle.net/ #}
+				<p>{% raw %}{{msg_generate_salt}}{% endraw %}</p>
+				<p class="center"><a class="btn btn_bold_border btn_50" href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="noopener"{% raw %}>{{msg_generate}}{% endraw %}</a></p>
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>WP_SITEURL</legend>
+				<input type="text" class="code" readonly id="wp_site_url" value="define( 'WP_SITEURL', 'http://tu-sitio.com' );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>WP_HOME</legend>
+				<input type="text" class="code" readonly id="wp_home" value="define( 'WP_HOME', 'http://tu-sitio.com' );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_cookie_domain}}{% endraw %}</legend>
+				<input type="text" class="code" readonly id="wp_cookie_domain" value="define( 'COOKIE_DOMAIN', 'tu-sitio.com' );">
+			</fieldset>
+
+			<fieldset class="wp_fieldset visible">
+				<legend>{% raw %}{{msg_post_autosave}}{% endraw %}</legend>
+
+				<select name="post_autosave" id="post_autosave">
+					<option value="30">{% raw %}{{msg_post_30_sec}}{% endraw %}</option>
+					<option value="60" selected>{% raw %}{{msg_post_60_sec}}{% endraw %}</option>
+					<option value="90">{% raw %}{{msg_post_90_sec}}{% endraw %}</option>
+					<option value="120">{% raw %}{{msg_post_2_min}}{% endraw %}</option>
+					<option value="180">{% raw %}{{msg_post_3_min}}{% endraw %}</option>
+					<option value="240">{% raw %}{{msg_post_4_min}}{% endraw %}</option>
+					<option value="300">{% raw %}{{msg_post_5_min}}{% endraw %}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="post_autosave_text" value="define( 'AUTOSAVE_INTERVAL', 60 );">
+			</fieldset>
+
+			<fieldset class="wp_fieldset visible">
+				<legend>{% raw %}{{msg_post_revisions}}{% endraw %}</legend>
+
+				<select name="post_revisions" id="post_revisions">
+					<option value="true" selected>{% raw %}{{msg_revisions_true}}{% endraw %}</option>
+					<option value="false">{% raw %}{{msg_revisions_false}}{% endraw %}</option>
+					<option value="1">{% raw %}{{msg_revisions_1}}{% endraw %}</option>
+					<option value="3">{% raw %}{{msg_revisions_3}}{% endraw %}</option>
+					<option value="5">{% raw %}{{msg_revisions_5}}{% endraw %}</option>
+					<option value="10">{% raw %}{{msg_revisions_10}}{% endraw %}</option>
+					<option value="15">{% raw %}{{msg_revisions_15}}{% endraw %}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="post_revisions_text" value="define( 'WP_POST_REVISIONS', true );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_ssl_login}}{% endraw %}</legend>
+
+				<select name="ssl_login" id="ssl_login">
+					<option value="false" selected>{% raw %}{{msg_no}}{% endraw %}</option>
+					<option value="true" >{% raw %}{{msg_yes}}{% endraw %}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_ssl_login" value="define( 'FORCE_SSL_LOGIN', false );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_ssl_admin}}{% endraw %}</legend>
+
+				<select name="ssl_admin" id="ssl_admin">
+					<option value="false" selected>{% raw %}{{msg_no}}{% endraw %}</option>
+					<option value="true" >{% raw %}{{msg_yes}}{% endraw %}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_ssl_admin" value="define( 'FORCE_SSL_ADMIN', false );">
+			</fieldset>
+
+{% include "partials/footer.njk" -%}

@@ -69,31 +69,6 @@ var utils = {
 		return frag;
 	}, // /create.
 
-	set_menu: function( active_item: string ): void {
-		'use strict';
-
-		var html_menu = '';
-		var sections, sections_length;
-
-		sections = [ 'home', 'wpo', 'web-server', 'wp-tools', 'wp-code', 'wp-plugins', 'wp-themes', 'hosting' ];
-		sections_length = sections.length;
-
-		if ( document.getElementById( 'primary_menu' ) ) {
-			for ( var i = 0; i < sections_length; i++ ) {
-				if ( active_item === sections[i] ) {
-					html_menu += '<div id="' + sections[i] + '_home" class="item"><img src="../img/' + sections[i] + '-48.png" /></div>';
-				} else {
-					html_menu += '<div id="' + sections[i] + '_home" class="item"><a href="' + sections[i] + '.html"><img src="../img/' + sections[i] + '-48.png" /></a></div>';
-				}
-			}
-
-			var fragment = this.create( html_menu );
-			document.getElementById( 'primary_menu' ).appendChild( fragment );
-		} else {
-			return null;
-		}
-	}, // /set_menu.
-
 	get_current_tab: function( fn: any ) {
 		'use strict';
 

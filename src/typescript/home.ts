@@ -2,6 +2,9 @@
 document.addEventListener( 'DOMContentLoaded', function() {
 	'use strict';
 
+	utils.translator( document.body ); // Only if html page has body strings to translate.
+	//utils.translator( document.head ); // Only if html page has head strings to translate.
+
 	function show_tab_data_home( tab: any ) {
 		var html, https_img, https_txt;
 
@@ -105,11 +108,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		var fragment = utils.create( html );
 		document.getElementById( 'api_url_info' ).appendChild( fragment );
 	}
-
-	utils.translator( document.body ); // Only if html page has body strings to translate.
-	//utils.translator( document.head ); // Only if html page has head strings to translate.
-
-	utils.set_menu( 'home' );
 
 	utils.get_current_tab( show_tab_data_home );
 

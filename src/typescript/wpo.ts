@@ -5,6 +5,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	var active_tabs: any = document.getElementsByClassName( 'item_wpo active_tab' );
 	var tab_wpo: any     = document.getElementsByClassName( 'wpo_tab' );
 
+	utils.translator( document.body ); // Only if html page has body strings to translate.
+	//utils.translator( document.head ); // Only if html page has head strings to translate.
+
 	function show_section_wpo() {
 		var active_tab = document.getElementById( this.id );
 
@@ -105,10 +108,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		} );
 	}
 
-	utils.translator( document.body ); // Only if html page has body strings to translate.
-	//utils.translator( document.head ); // Only if html page has head strings to translate.
-
-	utils.set_menu( 'wpo' );
+	//utils.set_menu( 'wpo' );
 
 	utils.get_current_tab( show_tabs_buttons );
 

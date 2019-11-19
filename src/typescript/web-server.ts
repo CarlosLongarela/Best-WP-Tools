@@ -4,8 +4,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	utils.translator( document.body ); // Only if html page has body strings to translate.
 	//utils.translator( document.head ); // Only if html page has head strings to translate.
 
-	utils.set_menu( 'web-server' );
-
 	// Change from Apache to Nginx and viceversa.
 	document.getElementById( 'check_apache_nginx' ).addEventListener( 'click', function() {
 		var apache_div = document.getElementById( 'apache_div' );

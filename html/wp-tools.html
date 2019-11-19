@@ -10,17 +10,47 @@
 <body id="best-wp-tools">
 
 	<div id="main">
-		<nav id="primary_menu"></nav>
+		<nav id="primary_menu">
+	<div id="menu_home" class="item">
+		<a href="home.html"><img src="../img/home-48.png"></a>
+		</div>
+
+	<div id="menu_wpo" class="item">
+		<a href="wpo.html"><img src="../img/wpo-48.png"></a>
+		</div>
+
+	<div id="menu_web-server" class="item">
+		<a href="web-server.html"><img src="../img/web-server-48.png"></a>
+		</div>
+
+	<div id="menu_wp-tools" class="item">
+		<img src="../img/wp-tools-48.png">
+		</div>
+
+	<div id="menu_wp-code" class="item">
+		<a href="wp-code.html"><img src="../img/wp-code-48.png"></a>
+		</div>
+
+	<div id="menu_wp-plugins" class="item">
+		<a href="wp-plugins.html"><img src="../img/wp-plugins-48.png"></a>
+		</div>
+
+	<div id="menu_wp-themes" class="item">
+		<a href="wp-themes.html"><img src="../img/wp-themes-48.png"></a>
+		</div>
+
+	<div id="menu_hosting" class="item">
+		<a href="hosting.html"><img src="../img/hosting-48.png"></a>
+		</div>
+</nav>
 
 		<div id="data">
 			<div id="notice"></div>
 
 			<h1>{{msg_wp_tools_title}}</h1>
 
-			<h4>{{msg_wp_config_title}}</h4>
-
 			<fieldset class="wpo_fieldset visible">
-				<legend>{{msg_security_keys}}</legend>				<!--https://jsfiddle.net/-->
+				<legend>{{msg_security_keys}}</legend> 
 				<p>{{msg_generate_salt}}</p>
 				<p class="center"><a class="btn btn_bold_border btn_50" href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="noopener">{{msg_generate}}</a></p>
 			</fieldset>
@@ -93,7 +123,9 @@
 
 				<input type="text" class="code" readonly id="wp_ssl_admin" value="define( 'FORCE_SSL_ADMIN', false );">
 			</fieldset>
+
 		</div>
+
 	</div>
 
 	<script src="../js/wp-tools.min.js"></script>

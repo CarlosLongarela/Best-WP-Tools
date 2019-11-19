@@ -1,0 +1,14 @@
+{% set page_title = "Home" -%}
+{% set section = "home" -%}
+
+{% include "partials/header.njk" %}
+
+			<div class="div_info" id="app_info">
+				<h1><a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">{% raw %}{{app_name}}{% endraw %}</a></h1>
+				<p>{% raw %}{{plugin_info}}{% endraw %} <a href="mailto:carlos+best-wp-tools@longarela.eu">carlos+best-wp-tools@longarela.eu</a> </p>
+			</div>
+
+			<div id="url_info"></div>
+			<div id="api_url_info"></div>
+
+{% include "partials/footer.njk" -%}

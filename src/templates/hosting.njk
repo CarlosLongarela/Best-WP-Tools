@@ -1,0 +1,24 @@
+{% set page_title = "Hosting" -%}
+{% set section = "hosting" -%}
+
+{% include "partials/header.njk" %}
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>Kinsta</legend>
+				<h3>{% raw %}{{msg_kinsta_title}}{% endraw %}</h3>
+				<a class="without_border" href="https://kinsta.com/plans/?kaid=PCQMLCQZIOJF" target="_blank" rel="noopener noreferrer">
+					<img src="../img/kinsta-550x68.png" width="550" height="68" alt="Kinsta">
+				</a>
+				<p>{% raw %}{{msg_kinsta_text}}{% endraw %}</p>
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>SiteGround</legend>
+				<h3>{% raw %}{{msg_siteground_title}}{% endraw %}</h3>
+				<a class="without_border" href="https://www.siteground.com/go/best-wp-tools" target="_blank" rel="noopener noreferrer">
+					<img src="../img/siteground-550x68.png" width="550" height="68" alt="SiteGround">
+				</a>
+				<p>{% raw %}{{msg_siteground_text}}{% endraw %}</p>
+			</fieldset>
+
+{% include "partials/footer.njk" -%}

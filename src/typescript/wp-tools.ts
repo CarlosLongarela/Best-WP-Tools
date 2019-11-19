@@ -1,6 +1,9 @@
 document.addEventListener( 'DOMContentLoaded', function() {
 	'use strict';
 
+	utils.translator( document.body ); // Only if html page has body strings to translate.
+	//utils.translator( document.head ); // Only if html page has head strings to translate.
+
 	function set_btns_url( tab: any ) {
 		var current_url    = tab.url;
 		var current_domain = utils.extract_hostname( current_url );
@@ -17,10 +20,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		( <HTMLInputElement>document.getElementById( 'wp_cookie_domain' ) ).value = "define( 'COOKIE_DOMAIN', '" + current_domain + "' );";
 	}
 
-	utils.translator( document.body ); // Only if html page has body strings to translate.
-	//utils.translator( document.head ); // Only if html page has head strings to translate.
-
-	utils.set_menu( 'wp-tools' );
+	//utils.set_menu( 'wp-tools' );
 
 	utils.get_current_tab( set_btns_url );
 

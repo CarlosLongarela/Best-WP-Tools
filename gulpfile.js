@@ -1,5 +1,6 @@
 var gulp         = require( 'gulp' ),
 	ts           = require( 'gulp-typescript' ),
+	nunjucks     = require( 'gulp-nunjucks' ),
 	uglify       = require( 'gulp-uglify' ),
 	sass         = require( 'gulp-sass' ),
 	autoprefixer = require( 'autoprefixer' ),
@@ -20,10 +21,29 @@ var SourceSCSS = [
 	'src/scss/*.scss',
 ];
 
+var SourceNJK = [
+	'src/templates/*.njk',
+];
+
 var plugins = [
 	autoprefixer( 'last 2 versions', '> 5%', 'not ie 6-9' ),
 	cssnano()
 ];
+
+/** Nunjucks Tasks */
+gulp.task( 'nunjucks', function() {
+	var njk_dest = 'html';
+
+	return gulp.src( SourceNJK )
+	.pipe( nunjucks.compile() )
+	.pipe( rename( { extname: '.html' } ) )
+	.pipe( gulp.dest( njk_dest ) )
+	.pipe( notify( {
+		title: 'Gulp NJK Task Result:',
+		message: 'Files from [/' + SourceNJK + '/] created in [/' + njk_dest + '/].',
+		onLast: true
+	} ) );
+  });
 
 /** Js Tasks */
 gulp.task( 'general-scripts', function() {
@@ -66,6 +86,9 @@ gulp.task( 'general-scss', function() {
 } );
 
 gulp.task( 'watch', function() {
+	// Inspect changes in njk files.
+	gulp.watch( SourceNJK, gulp.series( 'nunjucks' ) );
+
 	// Inspect changes in ts files.
 	gulp.watch( SourceTS, gulp.series( 'general-scripts' ) );
 

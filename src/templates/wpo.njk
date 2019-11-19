@@ -1,0 +1,71 @@
+{% set page_title = "WPO" -%}
+{% set section = "wpo" -%}
+
+{% include "partials/header.njk" %}
+
+			<h1>{% raw %}{{msg_medition_tools}}{% endraw %}</h1>
+
+			<div id="menu_wpo_tools">
+				<div id="section_wpo" class="item_wpo active_tab">WPO</div>
+				<div id="section_security" class="item_wpo">{% raw %}{{msg_security}}{% endraw %}</div>
+				<div id="section_ttfb" class="item_wpo">TTFB</div>
+				<div id="section_http2" class="item_wpo">HTTP/2</div>
+				<div id="section_dns" class="item_wpo">DNS</div>
+				<div id="section_gzip" class="item_wpo">GZIP</div>
+				<div id="section_mail" class="item_wpo">MAIL</div>
+			</div>
+
+			<div class="wpo_tab visible" id="target_section_wpo">
+				<h2>WPO</h2>
+
+				<input id="pagespeed_insights" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_pagespeed_insights}}{% endraw %}">
+				<input id="geek_flare" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_geek_flare}}{% endraw %}">
+
+				<p class="txt_notice">* {% raw %}{{msg_other_wpo_links}}{% endraw %}</p>
+
+				<a class="btn btn_50 btn_bold_border" href="https://tools.pingdom.com/" target="_blank" rel="noopener noreferrer">Pingdom Website Speed Test</a>
+				<a class="btn btn_50 btn_bold_border" href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">GTMetrix</a>
+				<a class="btn btn_50 btn_bold_border" href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a>
+				<a class="btn btn_50 btn_bold_border" href="https://tools.keycdn.com/speed" target="_blank" rel="noopener noreferrer">keycdn Website Speed Test</a>
+			</div>
+
+			<div class="wpo_tab" id="target_section_security">
+				<h2>{% raw %}{{msg_security}}{% endraw %}</h2>
+				<input id="sucuri_sitecheck" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_sucuri_sitecheck}}{% endraw %}">
+			</div>
+
+			<div class="wpo_tab" id="target_section_ttfb">
+				<h2>TTFB (Time To First Byte)</h2>
+				<input id="keycdn_url_speed" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_keycdn_url_speed}}{% endraw %}">
+				<input id="sucuri_loadtimetester" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_sucuri_loadtimetester}}{% endraw %}">
+				<input id="byte_check" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_byte_check}}{% endraw %}">
+			</div>
+
+			<div class="wpo_tab" id="target_section_http2">
+				<h2>HTTP/2</h2>
+				<input id="http2_pro" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_http2_pro}}{% endraw %}">
+				<input id="http2_geek_flare" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_http2_geek_flare}}{% endraw %}">
+			</div>
+
+			<div class="wpo_tab" id="target_section_dns">
+				<h2>DNS</h2>
+				<input id="pingdom_dns_health" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_pingdom_dns_health}}{% endraw %}">
+				<input id="mx_toolbox" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_mx_toolbox}}{% endraw %}">
+				<input id="dns_checker" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_dns_checker}}{% endraw %}">
+				<input id="dns_checker_ipv6" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_dns_checker_ipv6}}{% endraw %}">
+			</div>
+
+			<div class="wpo_tab" id="target_section_gzip">
+				<h2>Gzip</h2>
+				<input id="check_gzip_compression" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_check_gzip_compression}}{% endraw %}">
+			</div>
+
+			<div class="wpo_tab" id="target_section_mail">
+				<h2>Mail</h2>
+				<input id="mx_mx_toolbox" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_mx_mx_toolbox}}{% endraw %}">
+				<input id="smtp_mx_toolbox" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_smtp_mx_toolbox}}{% endraw %}">
+				<input id="blacklist_mx_toolbox" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_blacklist_mx_toolbox}}{% endraw %}">
+				<input id="mx_gsuite" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_gsuite}}{% endraw %}">
+			</div>
+
+{% include "partials/footer.njk" -%}
