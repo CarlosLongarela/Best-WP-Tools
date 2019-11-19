@@ -68,6 +68,12 @@ a {
 	}
 }
 
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
 .without_border {
 	border: none;
 	text-decoration: none;
@@ -87,7 +93,7 @@ select {
 fieldset {
 	border: 1px solid $wpBlue;
 	margin-bottom: 10px;
-	padding: 5px 8px 20px;
+	padding: 5px 8px 10px;
 
 	legend {
 		padding: 0 10px;
@@ -240,9 +246,9 @@ fieldset {
 .wpo_tab {
 	display: none;
 	border: 2px solid $wpBlue;
-	/*border-top: none;*/
 	margin-top: -2px;
-	padding: 12px 10px 10px;
+	margin-bottom: 10px;
+	padding: 12px 10px 20px 10px;
 	background-color: $textLight;
 
 	.list_item {
@@ -254,51 +260,49 @@ fieldset {
 	display: block;
 }
 
-.btn_light {
-	border: 3px solid $wpBlue;
-	border-radius: 6px;
-	font-weight: 600;
-	padding: 5px 15px;
-	text-decoration: none;
-
-	&:hover {
-		border: 3px solid $wpOrange;
-		color: $wpOrange;
-	}
-}
-
 .btn {
+	display: inline-block;
 	margin-top: 10px;
-	border: none;
 	cursor: pointer;
-	background: $btnBGColorNormalDark;
-	/*background-image: -webkit-linear-gradient(top, #3deb94, #169616);
-	background-image: -moz-linear-gradient(top, #3deb94, #169616);
-	background-image: -ms-linear-gradient(top, #3deb94, #169616);
-	background-image: -o-linear-gradient(top, #3deb94, #169616);*/
-	/* background-image: linear-gradient(to bottom, $btnBGColorNormalLight, $btnBGColorNormalDark); */
-	/*-webkit-border-radius: 6;
-	-moz-border-radius:$6;*/
+
+	border: none;
 	border-radius: 6px;
-	/*-webkit-box-shadow: 0px 1px 3px #666666;
-	-moz-box-shadow: 0px 1px 3px #666666;*/
 	box-shadow: 0px 1px 3px #666666;
-	color: #ffffff;
 	font-weight: 600;
 	padding: 10px 15px;
 	text-decoration: none;
 
 	&:hover {
-		background: $btnBGColorNormalLight;
 		color: #000;
-		/*background-image: -webkit-linear-gradient(top, #169616, #3deb94);
-		background-image: -moz-linear-gradient(top, #169616, #3deb94);
-		background-image: -ms-linear-gradient(top, #169616, #3deb94);
-		background-image: -o-linear-gradient(top, #169616, #3deb94);*/
-		/* background-image: linear-gradient(to bottom, $btnBGColorNormalDark, $btnBGColorNormalLight);*/
 		text-decoration: none;
 	}
+
+	&.btn_green {
+		background: $btnBGColorNormalDark;
+		color: $textLight;
+
+		&:hover {
+			background: $btnBGColorNormalLight;
+			color: $black;
+		}
+	}
+
+	&.btn_bold_border {
+		border: 3px solid $wpBlue;
+		padding: 5px 15px;
+
+		&:hover {
+			border: 3px solid $wpOrange;
+			color: $wpOrange;
+		}
+	}
+
+	&.btn_50 {
+		width: 40vw;
+		text-align: center;
+	}
 }
+
 
 .url {
 	overflow-wrap: break-word;
@@ -389,7 +393,6 @@ fieldset {
 
 .code {
 	margin: auto;
-	margin-bottom: 22px;
 	font-family: Consolas, Monaco, "Courier New", Courier, monospace;
 	font-size: 12px;
 	font-weight: inherit;
