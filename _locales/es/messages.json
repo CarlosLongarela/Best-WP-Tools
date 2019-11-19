@@ -348,7 +348,35 @@
     },
     "msg_flywheel_text": {
       "message": "Cualquiera que sea tu entorno de trabajo, la potente plataforma WordPress de Flywheel elimina todas las molestias del alojamiento, agiliza tus procesos y te permite volver a hacer tu mejor trabajo."
+    },
+    "msg_hire_codeable": {
+      "message": "Contrata los mejores expertos de WordPress"
+    },
+    "msg_pastebin": {
+      "message": "Pastebin"
+    },
+    "msg_https": {
+      "message": "Redirección HTTPS"
+    },
+    "msg_disable_php_uploads": {
+      "message": "Desactivar PHP en Uploads"
+    },
+    "msg_disable_php_plugins": {
+      "message": "Desactivar PHP en Plugins"
+    },
+    "msg_disable_php_themes": {
+      "message": "Desactivar PHP en Themes"
+    },
+    "msg_filter_methods": {
+      "message": "Filtrar métodos de petición"
+    },
+    "msg_filter_query": {
+      "message": "Filtrar cadenas sospechochas en la URL"
+    },
+    "msg_reduce_spam": {
+      "message": "Reducir comentarios Spam"
+    },
+    "msg_protect_system_files": {
+      "message": "Proteger archivos del sistema"
     }
 }
-
-

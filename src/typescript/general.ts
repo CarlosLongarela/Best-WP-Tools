@@ -121,6 +121,15 @@ var utils = {
 		}
 	}, // /show_hide_div.
 
+	sleep: function( milliseconds: number ) {
+		var start = new Date().getTime();
+		for ( var i = 0; i < 1e7; i++ ) {
+			if ( ( new Date().getTime() - start ) > milliseconds ) {
+				break;
+			}
+		}
+	}, // /sleep
+
 	show_data_div: function() {
 		var data_style = document.getElementById( 'data' ).style;
 

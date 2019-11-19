@@ -20,8 +20,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		( <HTMLInputElement>document.getElementById( 'wp_cookie_domain' ) ).value = "define( 'COOKIE_DOMAIN', '" + current_domain + "' );";
 	}
 
-	//utils.set_menu( 'wp-tools' );
-
 	utils.get_current_tab( set_btns_url );
 
 	document.getElementById( 'post_autosave' ).addEventListener( 'change', function() {

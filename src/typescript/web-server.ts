@@ -4,6 +4,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	utils.translator( document.body ); // Only if html page has body strings to translate.
 	//utils.translator( document.head ); // Only if html page has head strings to translate.
 
+	function set_btns_url( tab: any ) {
+		var current_url    = tab.url;
+		var current_domain = utils.extract_hostname( current_url );
+
+		( <HTMLInputElement>document.getElementById( 'https_nginx' ) ).value = "server {\n \tlisten      80;\n \tserver_name " + current_domain + ";\n \trewrite     ^ https://$server_name$request_uri? permanent;\n}";
+	}
+
+	utils.get_current_tab( set_btns_url );
+
 	// Change from Apache to Nginx and viceversa.
 	document.getElementById( 'check_apache_nginx' ).addEventListener( 'click', function() {
 		var apache_div = document.getElementById( 'apache_div' );

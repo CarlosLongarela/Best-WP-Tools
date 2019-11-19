@@ -348,9 +348,35 @@
     },
     "msg_flywheel_text": {
       "message": "Whatever your work environment, Flywheel's powerful WordPress platform removes all the hassles of hosting, streamlines your processes, and lets you get back to doing your best work."
+    },
+    "msg_hire_codeable": {
+      "message": "Hire Best WordPress Experts"
+    },
+    "msg_pastebin": {
+      "message": "Pastebin"
+    },
+    "msg_https": {
+      "message": "HTTPS Redirection"
+    },
+    "msg_disable_php_uploads": {
+      "message": "Disable PHP in Uploads"
+    },
+    "msg_disable_php_plugins": {
+      "message": "Disable PHP in Plugins"
+    },
+    "msg_disable_php_themes": {
+      "message": "Disable PHP in Themes"
+    },
+    "msg_filter_methods": {
+      "message": "Filter Request Methods"
+    },
+    "msg_filter_query": {
+      "message": "Filter Suspicious Query Strings in the URL"
+    },
+    "msg_reduce_spam": {
+      "message": "Reduce Comment Spam"
+    },
+    "msg_protect_system_files": {
+      "message": "Protect System Files"
     }
 }
-
-
-
-

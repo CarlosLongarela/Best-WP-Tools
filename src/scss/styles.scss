@@ -163,7 +163,7 @@ fieldset {
 	height: 0;
 	overflow: hidden;
 	opacity: 0;
-	transition: opacity 1s linear;
+	transition: all 0.2s ease-out 0.2s;
 }
 
 #primary_menu {
@@ -437,6 +437,10 @@ fieldset {
 textarea.code {
 	min-height: 12em;
 	resize: vertical;
+
+	&.half {
+		min-height: 6em;
+	}
 }
 
 .icon_copy {

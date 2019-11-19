@@ -31,6 +31,14 @@
 </IfModule>
 # END WordPress</textarea>
 
+				<h2 class="title_textarea">{% raw %}{{msg_https}}{% endraw %}</h2>
+				<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="https_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="https_apache" class="code half" readonly>
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</textarea>
+
 				<h2 class="title_textarea">{% raw %}{{msg_gzip}}{% endraw %}</h2>
 				<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="gzip_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
 <textarea id="gzip_apache" class="code" readonly>
@@ -78,8 +86,16 @@ location / {
 	# Include the "?$args" part so non-default permalinks
 	# doesn't break when using query string
 	try_files $uri $uri/ /index.php?$args;
-}
-</textarea>
+}</textarea>
+
+				<h2 class="title_textarea">{% raw %}{{msg_https}}{% endraw %}</h2>
+				<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="https_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="https_nginx" class="code half" readonly>
+server {
+	listen      80;
+	server_name tu-sitio.com;
+	rewrite     ^ https://$server_name$request_uri? permanent;
+}</textarea>
 
 					<h2 class="title_textarea">{% raw %}{{msg_gzip}}{% endraw %}</h2>
 					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="gzip_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
@@ -96,8 +112,92 @@ gzip_types text/plain text/html text/css application/x-javascript text/xml appli
 gzip_disable "MSIE [1-6].(?!.*SV1)";
 
 # Add a vary header for downstream proxies to avoid sending cached gzipped files to IE6
-gzip_vary on;
+gzip_vary on;</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_reduce_spam}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="reduce_spam_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="reduce_spam_nginx" class="code" readonly>
+# Reduce Comment Spam
+location = /wp-comments-post.php {
+	limit_except POST { deny all; }
+	if ($http_user_agent ~ "^$") { return 403; }
+	valid_referers server_names jetpack.wordpress.com/jetpack-comment/;
+	if ($invalid_referer) { return 403; }
+}</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_protect_system_files}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="protect_system_files_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="protect_system_files_nginx" class="code" readonly>
+# Protect System Files
+location = /wp-admin/install.php { deny all; }
+location = /nginx.conf { deny all; }
+location ~ /\.htaccess$ { deny all; }
+location ~ /readme\.html$ { deny all; }
+location ~ /readme\.txt$ { deny all; }
+location ~ /wp-config.php$ { deny all; }
+location ~ ^/wp-admin/includes/ { deny all; }
+location ~ ^/wp-includes/[^/]+\.php$ { deny all; }
+location ~ ^/wp-includes/js/tinymce/langs/.+\.php$ { deny all; }
+location ~ ^/wp-includes/theme-compat/ { deny all; }
+location ~ ^.*/\.git/.*$ { deny all; }
+location ~ ^.*/\.svn/.*$ { deny all; }</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_disable_php_uploads}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="disable_php_uploads_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="disable_php_uploads_nginx" class="code half" readonly>
+# Disable PHP in Uploads
+location ~ ^/wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)$ { deny all; }</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_disable_php_plugins}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="disable_php_plugins_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="disable_php_plugins_nginx" class="code half" readonly>
+# Disable PHP in Plugins
+location ~ ^/wp\-content/plugins/.*\.(?:php[1-7]?|pht|phtml?|phps)$ { deny all; }</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_disable_php_themes}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="disable_php_themes_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="disable_php_themes_nginx" class="code half" readonly>
+# Disable PHP in Themes
+location ~ ^/wp\-content/themes/.*\.(?:php[1-7]?|pht|phtml?|phps)$ { deny all; }</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_filter_methods}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="filter_methods_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="filter_methods_nginx" class="code half" readonly>
+# Filter Request Methods
+if ( $request_method ~* ^(TRACE|TRACK)$ ) { return 403; }</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_filter_query}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="filter_query_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="filter_query_nginx" class="code" readonly>
+# Filter Suspicious Query Strings in the URL
+set $susquery 0;
+if ( $args ~* "\.\./" ) { set $susquery 1; }
+if ( $args ~* "\.(bash|git|hg|log|svn|swp|cvs)" ) { set $susquery 1; }
+if ( $args ~* "etc/passwd" ) { set $susquery 1; }
+if ( $args ~* "boot\.ini" ) { set $susquery 1; }
+if ( $args ~* "ftp:" ) { set $susquery 1; }
+if ( $args ~* "https?:" ) { set $susquery 1; }
+if ( $args ~* "(<|%3C)script(>|%3E)" ) { set $susquery 1; }
+if ( $args ~* "mosConfig_[a-zA-Z_]{1,21}(=|%3D)" ) { set $susquery 1; }
+if ( $args ~* "base64_decode\(" ) { set $susquery 1; }
+if ( $args ~* "%24&x" ) { set $susquery 1; }
+if ( $args ~* "127\.0" ) { set $susquery 1; }
+if ( $args ~* "(^|\W)(globals|encode|localhost|loopback)($|\W)" ) { set $susquery 1; }
+if ( $args ~* "(^|\W)(insert|concat|union|declare)($|\W)" ) { set $susquery 1; }
+if ( $args ~* "%[01][0-9A-F]" ) { set $susquery 1; }
+if ( $args ~ "^loggedout=true" ) { set $susquery 0; }
+if ( $args ~ "^action=jetpack-sso" ) { set $susquery 0; }
+if ( $args ~ "^action=rp" ) { set $susquery 0; }
+if ( $http_cookie ~ "wordpress_logged_in_" ) { set $susquery 0; }
+if ( $http_referer ~* "^https?://maps\.googleapis\.com/" ) { set $susquery 0; }
+if ( $susquery = 1 ) { return 403; }</textarea>
+
+			<h2 class="title_textarea">{% raw %}{{msg_bad_bots}}{% endraw %}</h2>
+			<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="bad_bots_nginx" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="bad_bots_nginx" class="code" readonly>
+{% include "includes/nginx-rules-bad-bots.njk" -%}
 </textarea>
+
 			</div>
 
 {% include "partials/footer.njk" -%}
