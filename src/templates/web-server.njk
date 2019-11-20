@@ -66,6 +66,127 @@ AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript</textarea>
 
+				<h2 class="title_textarea">{% raw %}{{msg_directory_browsing}}{% endraw %}</h2>
+				<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="directory_browsing_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="directory_browsing_apache" class="code half" readonly>
+# Disable Directory Browsing
+Options -Indexes</textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_reduce_spam}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="reduce_spam_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="reduce_spam_apache" class="code" readonly>
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# Reduce Comment Spam
+	RewriteCond %{REQUEST_METHOD} POST
+	RewriteCond %{REQUEST_URI} /wp-comments-post\.php$
+	RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+	RewriteCond %{HTTP_REFERER} !^https?://(([^/]+\.)?nginx-rules\.test|jetpack\.wordpress\.com/jetpack-comment)(/|$) [NC]
+	RewriteRule ^.* - [F]
+</IfModule></textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_protect_system_files}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="protect_system_files_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="protect_system_files_apache" class="code" readonly>
+# Protect System Files
+<files .htaccess>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</files>
+<files readme.html>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</files>
+<files readme.txt>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</files>
+<files wp-config.php>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</files></textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_disable_php_uploads}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="disable_php_uploads_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="disable_php_uploads_apache" class="code half" readonly>
+<IfModule mod_rewrite.c>
+# Disable PHP in Uploads
+RewriteRule ^wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+</IfModule></textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_disable_php_plugins}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="disable_php_plugins_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="disable_php_plugins_apache" class="code half" readonly>
+<IfModule mod_rewrite.c>
+# Disable PHP in Plugins
+RewriteRule ^wp\-content/plugins/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+</IfModule></textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_disable_php_themes}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="disable_php_themes_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="disable_php_themes_apache" class="code half" readonly>
+<IfModule mod_rewrite.c>
+# Disable PHP in Themes
+RewriteRule ^wp\-content/themes/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+</IfModule></textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_filter_methods}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="filter_methods_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="filter_methods_apache" class="code half" readonly>
+<IfModule mod_rewrite.c>
+# Filter Request Methods
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK) [NC]
+RewriteRule ^.* - [F]
+</IfModule></textarea>
+
+					<h2 class="title_textarea">{% raw %}{{msg_filter_query}}{% endraw %}</h2>
+					<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="filter_query_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
+<textarea id="filter_query_apache" class="code" readonly>
+<IfModule mod_rewrite.c>
+# Filter Suspicious Query Strings in the URL
+RewriteCond %{QUERY_STRING} \.\.\/ [OR]
+RewriteCond %{QUERY_STRING} \.(bash|git|hg|log|svn|swp|cvs) [NC,OR]
+RewriteCond %{QUERY_STRING} etc/passwd [NC,OR]
+RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
+RewriteCond %{QUERY_STRING} ftp: [NC,OR]
+RewriteCond %{QUERY_STRING} https?: [NC,OR]
+RewriteCond %{QUERY_STRING} (<|%3C)script(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|%3D) [NC,OR]
+RewriteCond %{QUERY_STRING} base64_decode\( [NC,OR]
+RewriteCond %{QUERY_STRING} %24&x [NC,OR]
+RewriteCond %{QUERY_STRING} 127\.0 [NC,OR]
+RewriteCond %{QUERY_STRING} (^|\W)(globals|encode|localhost|loopback)($|\W) [NC,OR]
+RewriteCond %{QUERY_STRING} (^|\W)(concat|insert|union|declare)($|\W) [NC,OR]
+RewriteCond %{QUERY_STRING} %[01][0-9A-F] [NC]
+RewriteCond %{QUERY_STRING} !^loggedout=true
+RewriteCond %{QUERY_STRING} !^action=jetpack-sso
+RewriteCond %{QUERY_STRING} !^action=rp
+RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
+RewriteCond %{HTTP_REFERER} !^http://maps\.googleapis\.com
+RewriteRule ^.* - [F]
+</IfModule></textarea>
+
 			<h2 class="title_textarea">{% raw %}{{msg_bad_bots}}{% endraw %}</h2>
 			<img src="../img/copy.png" width="16" height="16" class="icon_copy copy_text" data-id2copy="bad_bots_apache" title="{% raw %}{{msg_text_copy}}{% endraw %}" />
 <textarea id="bad_bots_apache" class="code" readonly>

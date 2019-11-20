@@ -378,5 +378,8 @@
     },
     "msg_protect_system_files": {
       "message": "Proteger archivos del sistema"
+    },
+    "msg_directory_browsing": {
+      "message": "Desactivar la navegación por el directorio"
     }
 }
