@@ -381,5 +381,14 @@
     },
     "msg_directory_browsing": {
       "message": "Disable Directory Browsing"
+    },
+    "msg_disable_file_editor": {
+      "message": "Disable File Editor"
+    },
+    "msg_front_memory": {
+      "message": "PHP: Frontend memory limit"
+    },
+    "msg_back_memory": {
+      "message": "PHP: Backend memory limit"
     }
 }

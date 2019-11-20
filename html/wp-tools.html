@@ -103,6 +103,17 @@
 			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
+				<legend>{{msg_disable_file_editor}}</legend>
+
+				<select name="disable_file_editor" id="disable_file_editor">
+					<option value="false" selected>{{msg_no}}</option>
+					<option value="true" >{{msg_yes}}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_disable_file_editor" value="define( 'DISALLOW_FILE_EDIT', false );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
 				<legend>{{msg_ssl_login}}</legend>
 
 				<select name="ssl_login" id="ssl_login">
@@ -122,6 +133,39 @@
 				</select>
 
 				<input type="text" class="code" readonly id="wp_ssl_admin" value="define( 'FORCE_SSL_ADMIN', false );">
+			</fieldset>
+
+
+			<fieldset class="wp_fieldset visible">
+				<legend>{{msg_front_memory}}</legend>
+
+				<select name="php_front_memory" id="php_front_memory">
+					<option value="40M" selected>40 MB</option>
+					<option value="64M">64 MB</option>
+					<option value="128M">128 MB</option>
+					<option value="256M">256 MB</option>
+					<option value="512M">512 MB</option>
+					<option value="768M">768 MB</option>
+					<option value="1024M">1024 MB</option>
+				</select>
+
+				<input type="text" class="code" readonly id="php_front_memory_text" value="define( 'WP_MEMORY_LIMIT', '40M );">
+			</fieldset>
+
+
+			<fieldset class="wp_fieldset visible">
+				<legend>{{msg_back_memory}}</legend>
+
+				<select name="php_back_memory" id="php_back_memory">
+					<option value="64M" selected>64 MB</option>
+					<option value="128M">128 MB</option>
+					<option value="256M">256 MB</option>
+					<option value="512M">512 MB</option>
+					<option value="768M">768 MB</option>
+					<option value="1024M">1024 MB</option>
+				</select>
+
+				<input type="text" class="code" readonly id="php_back_memory_text" value="define( 'WP_MAX_MEMORY_LIMIT', '64M );">
 			</fieldset>
 
 		</div>

@@ -30,12 +30,24 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		( <HTMLInputElement>document.getElementById( 'post_revisions_text' ) ).value = "define( 'WP_POST_REVISIONS', " + ( <HTMLInputElement>this ).value + " );";
 	} );
 
+	document.getElementById( 'disable_file_editor' ).addEventListener( 'change', function() {
+		( <HTMLInputElement>document.getElementById( 'wp_disable_file_editor' ) ).value = "define( 'DISALLOW_FILE_EDIT', " + ( <HTMLInputElement>this ).value + " );";
+	} );
+
 	document.getElementById( 'ssl_login' ).addEventListener( 'change', function() {
 		( <HTMLInputElement>document.getElementById( 'wp_ssl_login' ) ).value = "define( 'FORCE_SSL_LOGIN', " + ( <HTMLInputElement>this ).value + " );";
 	} );
 
 	document.getElementById( 'ssl_admin' ).addEventListener( 'change', function() {
 		( <HTMLInputElement>document.getElementById( 'wp_ssl_admin' ) ).value = "define( 'FORCE_SSL_ADMIN', " + ( <HTMLInputElement>this ).value + " );";
+	} );
+
+	document.getElementById( 'php_front_memory' ).addEventListener( 'change', function() {
+		( <HTMLInputElement>document.getElementById( 'php_front_memory_text' ) ).value = "define( 'WP_MEMORY_LIMIT', '" + ( <HTMLInputElement>this ).value + "' );";
+	} );
+
+	document.getElementById( 'php_back_memory' ).addEventListener( 'change', function() {
+		( <HTMLInputElement>document.getElementById( 'php_back_memory_text' ) ).value = "define( 'WP_MAX_MEMORY_LIMIT', '" + ( <HTMLInputElement>this ).value + "' );";
 	} );
 
 	utils.show_data_div(); // Show principal content.
