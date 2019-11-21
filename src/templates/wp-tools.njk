@@ -124,4 +124,38 @@
 				<input type="text" class="code" readonly id="php_back_memory_text" value="define( 'WP_MAX_MEMORY_LIMIT', '64M );">
 			</fieldset>
 
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_auto_updater}}{% endraw %}</legend>
+
+				<select name="auto_updater" id="auto_updater">
+					<option value="false" selected>{% raw %}{{msg_no}}{% endraw %}</option>
+					<option value="true" >{% raw %}{{msg_yes}}{% endraw %}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_auto_updater" value="define( 'AUTOMATIC_UPDATER_DISABLED', false );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_core_updater}}{% endraw %}</legend>
+
+				<select name="core_updater" id="core_updater">
+					<option value="false" selected>{% raw %}{{msg_no}}{% endraw %}</option>
+					<option value="'minor'">{% raw %}{{msg_minor_versions}}{% endraw %}</option>
+					<option value="true">{% raw %}{{msg_major_versions}}{% endraw %}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_core_updater" value="define( 'WP_AUTO_UPDATE_CORE', false );">
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_disable_cron}}{% endraw %}</legend>
+
+				<select name="disable_cron" id="disable_cron">
+					<option value="false" selected>{% raw %}{{msg_no}}{% endraw %}</option>
+					<option value="true" >{% raw %}{{msg_yes}}{% endraw %}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_disable_cron" value="define( 'DISABLE_WP_CRON', false );">
+			</fieldset>
+
 {% include "partials/footer.njk" -%}

@@ -390,5 +390,20 @@
     },
     "msg_back_memory": {
       "message": "PHP: Límite de memoria en Backend"
+    },
+    "msg_auto_updater": {
+      "message": "Actualizaciones automáticas de WordPress"
+    },
+    "msg_core_updater": {
+      "message": "Actualizaciones automáticas del Core de WordPress"
+    },
+    "msg_major_versions": {
+      "message": "Versiones mayores"
+    },
+    "msg_minor_versions": {
+      "message": "Versiones menores"
+    },
+    "msg_disable_cron": {
+      "message": "Desactivar Cron interno de WordPress"
     }
 }
