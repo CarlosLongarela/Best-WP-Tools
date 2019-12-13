@@ -4,7 +4,7 @@
   "description": "Browser extension with WordPress Utils",
   "main": "gulpfile.js",
   "dependencies": {
-    "npm": "^6.13.0",
+    "npm": "^6.13.4",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
