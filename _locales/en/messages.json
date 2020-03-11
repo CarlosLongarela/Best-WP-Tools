@@ -405,5 +405,14 @@
     },
     "msg_disable_cron": {
       "message": "Disable internal WordPress Cron"
+    },
+    "msg_host_view": {
+      "message": "Website previewer before it goes live"
+    },
+    "msg_host2_view": {
+      "message": "Kinsta website previewer before it goes live"
+    },
+    "msg_sucuri_check": {
+      "message": "Security check & malware"
     }
 }
