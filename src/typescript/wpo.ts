@@ -15,9 +15,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 			active_tabs[0].classList.remove( 'active_tab' );
 		}
 
-		for ( var i = 0; i < tab_wpo.length; i++ ) {
-			tab_wpo[i].style.display = 'none';
-		}
+		tab_wpo.forEach( ( element: any ) => {
+			tab_wpo[element].style.display = 'none';
+		} );
 
 		active_tab.classList.add( 'active_tab' );
 
@@ -112,9 +112,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 	utils.get_current_tab( show_tabs_buttons );
 
-	for ( var j = 0; j < items_wpo.length; j++ ) {
-		items_wpo[j].addEventListener( 'click', show_section_wpo );
-	}
+	items_wpo.forEach( ( element: any ) => {
+		items_wpo[element].addEventListener( 'click', show_section_wpo );
+	} );
+
 
 	utils.show_data_div(); // Show principal content.
 
