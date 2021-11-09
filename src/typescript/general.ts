@@ -146,7 +146,8 @@ var utils = {
 
 		copyText.select();
 
-		document.execCommand( 'copy' );
+		//document.execCommand( 'copy' );
+		navigator.clipboard.writeText( copyText.value );
 
 		document.getElementById( 'notice' ).textContent = chrome.i18n.getMessage( 'msg_text_copied' );
 		this.show_div( 'notice' );
