@@ -1,7 +1,7 @@
 var gulp         = require( 'gulp' ),
 	ts           = require( 'gulp-typescript' ),
 	nunjucks     = require( 'gulp-nunjucks' ),
-	uglify       = require( 'gulp-uglify' ),
+	terser       = require( 'gulp-terser' );
 	sass         = require( 'gulp-sass' ),
 	autoprefixer = require( 'autoprefixer' ),
 	postcss      = require( 'postcss' ),
@@ -54,7 +54,7 @@ gulp.task( 'general-scripts', function() {
 		.pipe( sourcemaps.init() )
 		.pipe( sourcemaps.identityMap() )
 		.pipe( plumber() )
-		.pipe( uglify() )
+		.pipe( terser() )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( sourcemaps.write( './maps' ) )
 		.pipe( gulp.dest( js_dest ) )

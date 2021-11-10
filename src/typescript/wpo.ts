@@ -1,23 +1,23 @@
 document.addEventListener( 'DOMContentLoaded', function() {
 	'use strict';
 
-	var items_wpo: any   = document.getElementsByClassName( 'item_wpo' );
-	var active_tabs: any = document.getElementsByClassName( 'item_wpo active_tab' );
-	var tab_wpo: any     = document.getElementsByClassName( 'wpo_tab' );
+	const items_wpo: NodeListOf<HTMLElement>   = document.querySelectorAll( '.item_wpo' );
 
 	utils.translator( document.body ); // Only if html page has body strings to translate.
 	//utils.translator( document.head ); // Only if html page has head strings to translate.
 
 	function show_section_wpo() {
-		var active_tab = document.getElementById( this.id );
+		const active_tab: HTMLElement              = document.getElementById( this.id );
+		const active_tabs: NodeListOf<HTMLElement> = document.querySelectorAll( '.active_tab' );
+		const tab_wpo: NodeListOf<HTMLElement>     = document.querySelectorAll( '.wpo_tab' );
 
-		while ( active_tabs[0] ) {
-			active_tabs[0].classList.remove( 'active_tab' );
+		for ( let item of active_tabs ) {
+			item.classList.remove( 'active_tab' );
 		}
 
-		tab_wpo.forEach( ( element: any ) => {
-			tab_wpo[element].style.display = 'none';
-		} );
+		for ( let item of tab_wpo ) {
+			item.style.display = 'none';
+		}
 
 		active_tab.classList.add( 'active_tab' );
 
@@ -25,11 +25,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	}
 
 	function show_tabs_buttons( tab: any ) {
-		var current_url: string                  = tab.url;
-		var encoded_current_url: string          = encodeURI( current_url );
-		var current_domain: string               = utils.extract_hostname( current_url );
-		var current_naked_domain: string         = current_domain.replace( 'www.', '' );
-		var current_url_without_protocol: string = current_url.replace( 'https://', '' );
+		let current_url: string                  = tab.url;
+		let encoded_current_url: string          = encodeURI( current_url );
+		let current_domain: string               = utils.extract_hostname( current_url );
+		let current_naked_domain: string         = current_domain.replace( 'www.', '' );
+		let current_url_without_protocol: string = current_url.replace( 'https://', '' );
 		current_url_without_protocol             = current_url_without_protocol.replace( 'http://', '' );
 
 		// WPO.
@@ -112,9 +112,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 	utils.get_current_tab( show_tabs_buttons );
 
-	items_wpo.forEach( ( element: any ) => {
-		items_wpo[element].addEventListener( 'click', show_section_wpo );
-	} );
+	for ( let item of items_wpo ) {
+		item.addEventListener( 'click', show_section_wpo );
+	}
 
 
 	utils.show_data_div(); // Show principal content.

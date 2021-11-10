@@ -16,7 +16,7 @@
     "gulp-nunjucks": "5.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
+    "gulp-terser": "^2.1.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "postcss": "^8.3.11",
     "cssnano": "^5.0.10",
