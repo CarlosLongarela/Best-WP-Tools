@@ -89,9 +89,7 @@ var utils = {
 	url_not_valid: function() {
 		'use strict';
 
-		var fragment = this.create( '<p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">https://tabernawp.com/best-wordpress-tools</a></p>' );
-
-		console.log( fragment );
+		let fragment = this.create( '<p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">https://tabernawp.com/best-wordpress-tools</a></p>' );
 
 		document.getElementById( 'notice' ).appendChild( fragment );
 
@@ -122,8 +120,8 @@ var utils = {
 	}, // /show_hide_div.
 
 	sleep: function( milliseconds: number ) {
-		var start = new Date().getTime();
-		for ( var i = 0; i < 1e7; i++ ) {
+		let start: number = new Date().getTime();
+		for ( let i = 0; i < 1e7; i++ ) {
 			if ( ( new Date().getTime() - start ) > milliseconds ) {
 				break;
 			}
@@ -131,7 +129,7 @@ var utils = {
 	}, // /sleep
 
 	show_data_div: function() {
-		var data_style = document.getElementById( 'data' ).style;
+		let data_style: CSSStyleDeclaration = document.getElementById( 'data' ).style;
 
 		data_style.height   = 'auto';
 		data_style.overflow = 'auto';
@@ -159,7 +157,7 @@ var utils = {
 	extract_hostname: function( url: string ) {
 		'use strict';
 
-		var hostname;
+		let hostname: string;
 		//find & remove protocol (http, ftp, etc.) and get hostname
 
 		if ( url.indexOf( '://' ) > -1 ) {
