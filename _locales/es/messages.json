@@ -332,7 +332,7 @@
       "message": "Nunca has creado un sitio web de WordPress así hasta ahora. Divi es más que un tema de WordPress, es una plataforma de construcción de sitios web completamente nueva que reemplaza el editor de entradas estándar de WordPress con un editor visual muy superior."
     },
     "msg_bloom_plugins": {
-      "message": "Convierte a los visitantes en fieles seguidores. Bloom te ofrece todas las herramientas que necesitas para convertir a los visitantes de tu sitio web en fieles seguidores y clientes. Bloom no sólo se va a convierte muy bien, sino que también tiene un magnífica apariencia."
+      "message": "Convierte a los visitantes en fieles seguidores. Bloom te ofrece todas las herramientas que necesitas para convertir a los visitantes de tu sitio web en fieles seguidores y clientes. Bloom no sólo convierte muy bien, sino que también tiene un magnífica apariencia."
     },
     "msg_elementor_plugins": {
       "message": "El Constructor de Páginas de WordPress líder en el mundo. Diseño de Pixel Perfect en WordPress. La única plataforma de diseño completa que ofrece un diseño perfecto de píxeles, pero que produce un código 100% limpio."
@@ -414,5 +414,11 @@
     },
     "msg_sucuri_check": {
       "message": "Comprobación de seguridad y malware"
+    },
+    "msg_pro_next": {
+      "message": "Estoy trabajando en la versión Pro que estará disponible en breve. No dejes de visitar la siguiente url:"
+    },
+    "msg_meanwhile": {
+      "message": "Mientras tanto, te recomnedamos los siguientes servicios de hosting que yo suelo utilizar y si necesitas contratar un experto en WordPress, en Codeable econtrarás los mejores profesionales del sector."
     }
 }

@@ -1,62 +1,66 @@
-var gulp         = require( 'gulp' ),
+//const cssnano = require('cssnano');
+const gulp       = require( 'gulp' ),
 	ts           = require( 'gulp-typescript' ),
 	nunjucks     = require( 'gulp-nunjucks' ),
 	terser       = require( 'gulp-terser' );
-	sass         = require( 'gulp-sass' ),
-	autoprefixer = require( 'autoprefixer' ),
+	sass         = require( 'gulp-sass' )( require( 'node-sass' ) ),
+	autoprefixer = require( 'gulp-autoprefixer' ),
 	postcss      = require( 'postcss' ),
+	header       = require( 'gulp-header' ),
+	footer       = require( 'gulp-footer' ),
 	cssnano      = require( 'cssnano' ),
 	rename       = require( 'gulp-rename' ),
 	plumber      = require( 'gulp-plumber' ),
 	notify       = require( 'gulp-notify' ),
 	sourcemaps   = require( 'gulp-sourcemaps' );
 
-var tsconfig = require( './tsconfig.json' );
+const tsconfig = require( './tsconfig.json' );
 
-var SourceTS = [
+const SourceTS = [
 	'src/typescript/*.ts',
 ];
 
-var SourceSCSS = [
+const SourceSCSS = [
 	'src/scss/*.scss',
 ];
 
-var SourceNJK = [
+const SourceNJK = [
 	'src/templates/*.njk',
 ];
 
-var plugins = [
-	autoprefixer( 'last 2 versions', '> 5%', 'not ie 6-9' ),
-	cssnano()
-];
+let currentDate = new Date();
+let copy_text = 'Copyright (C) Carlos Longarela ' + currentDate.getFullYear() + '/' + currentDate.getMonth() + '/' + currentDate.getDay() + ' https://tabernawp.com/ <carlos@longarela.eu>';
 
 /** Nunjucks Tasks */
-gulp.task( 'nunjucks', function() {
-	var njk_dest = 'html';
+gulp.task( 'nunjucks', () => {
+	const njk_dest = 'html';
 
 	return gulp.src( SourceNJK )
-	.pipe( nunjucks.compile() )
-	.pipe( rename( { extname: '.html' } ) )
-	.pipe( gulp.dest( njk_dest ) )
-	.pipe( notify( {
-		title: 'Gulp NJK Task Result:',
-		message: 'Files from [/' + SourceNJK + '/] created in [/' + njk_dest + '/].',
-		onLast: true
-	} ) );
-  });
+		.pipe( plumber() )
+		.pipe( nunjucks.compile() )
+		.pipe( rename( { extname: '.html' } ) )
+		.pipe( footer( '\n<!-- ' + copy_text + '-->' ) )
+		.pipe( gulp.dest( njk_dest ) )
+		.pipe( notify( {
+			title: 'Gulp NJK Task Result:',
+			message: 'Files from [/' + SourceNJK + '/] created in [/' + njk_dest + '/].',
+			onLast: true
+		} ) );
+} );
 
 /** Js Tasks */
-gulp.task( 'general-scripts', function() {
-	var js_dest = 'js';
+gulp.task( 'general-scripts', () => {
+	const js_dest = 'js';
 
 	return gulp.src( SourceTS )
+		.pipe( plumber() )
 		.pipe( ts( tsconfig.compilerOptions ) )
 		.pipe( sourcemaps.init() )
 		.pipe( sourcemaps.identityMap() )
-		.pipe( plumber() )
 		.pipe( terser() )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( sourcemaps.write( './maps' ) )
+		.pipe( header( '// ' + copy_text + '\n' ) )
 		.pipe( gulp.dest( js_dest ) )
 		.pipe( notify( {
 			title: 'Gulp TS Task Result:',
@@ -66,16 +70,28 @@ gulp.task( 'general-scripts', function() {
 } );
 
 /** SCSS Tasks */
-gulp.task( 'general-scss', function() {
-	var css_dest = 'css';
-
+gulp.task( 'general-scss', () => {
+	const css_dest = 'css';
+	const plugins = [
+		autoprefixer( 'last 2 versions', '> 5%', 'not ie 6-9' ),
+		cssnano()
+	];
+	//const plugins = [
+	//	autoprefixer( ['last 2 versions'] ),
+	//	cssnano()
+	//];
 	return gulp.src( SourceSCSS )
+		.pipe( plumber() )
+		//.pipe(gulpPrefixer('// Copyright 2014 (C) Aswesome company'))
 		.pipe( sourcemaps.init() )
 		.pipe( sourcemaps.identityMap() )
-		.pipe( plumber() )
-		.pipe( sass().on( 'error', sass.logError ) )
-		.pipe( postcss( plugins ) )
+		.pipe( sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
+		.pipe( autoprefixer( 'last 2 versions', '> 5%', 'not ie 6-9' ) )
+		//.pipe( cssnano() )
+		//.pipe( postcss( plugins ) )
+		//.pipe( postcss() )
 		.pipe( rename( { suffix: '.min' } ) )
+		.pipe( header( '/* ' + copy_text + ' */\n' ) )
 		.pipe( sourcemaps.write( './maps' ) )
 		.pipe( gulp.dest( css_dest ) )
 		.pipe( notify( {
@@ -85,7 +101,7 @@ gulp.task( 'general-scss', function() {
 		} ) );
 } );
 
-gulp.task( 'watch', function() {
+gulp.task( 'watch', () => {
 	// Inspect changes in njk files.
 	gulp.watch( SourceNJK, gulp.series( 'nunjucks' ) );
 

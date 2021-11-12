@@ -414,5 +414,11 @@
     },
     "msg_sucuri_check": {
       "message": "Security check & malware"
+    },
+    "msg_pro_next": {
+      "message": "Estoy trabajando en la versión Pro que estará disponible en breve. No dejes de visitar la siguiente url:"
+    },
+    "msg_meanwhile": {
+      "message": "Mientras tanto, te recomnedamos los siguientes servicios de hosting que yo suelo utilizar y si necesitas contratar un experto en WordPress, en Codeable econtrarás los mejores profesionales del sector."
     }
 }
