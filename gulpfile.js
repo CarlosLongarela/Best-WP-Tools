@@ -4,7 +4,7 @@ const gulp       = require( 'gulp' ),
 	terser       = require( 'gulp-terser' );
 	sass         = require( 'gulp-sass' )( require( 'node-sass' ) ),
 	autoprefixer = require( 'gulp-autoprefixer' ),
-	postcss      = require( 'postcss' ),
+	postcss      = require( 'gulp-postcss' ),
 	header       = require( 'gulp-header' ),
 	footer       = require( 'gulp-footer' ),
 	cssnano      = require( 'cssnano' ),
@@ -27,8 +27,14 @@ const SourceNJK = [
 	'src/templates/*.njk',
 ];
 
-let currentDate = new Date();
-let copy_text = 'Copyright (C) Carlos Longarela ' + currentDate.getFullYear() + '/' + currentDate.getMonth() + '/' + currentDate.getDay() + ' https://tabernawp.com/ <carlos@longarela.eu>';
+
+const date = new Date();
+
+const day = date.getUTCDate();
+const month = date.getUTCMonth() + 1; // getUTCMonth() returns month from 0 to 11
+const year = date.getUTCFullYear();
+
+let copy_text = 'Copyright (C) Carlos Longarela ' + year + '/' + month + '/' + day + ' https://tabernawp.com/ <carlos@longarela.eu>';
 
 /** Nunjucks Tasks */
 gulp.task( 'nunjucks', () => {
@@ -82,7 +88,7 @@ gulp.task( 'general-scss', () => {
 		.pipe( sourcemaps.identityMap() )
 		.pipe( sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( 'last 2 versions', '> 5%', 'not ie 6-9' ) )
-		//.pipe( postcss( plugins ) )
+		//.pipe( postcss( plugins ) ) // TODO: Add PostCSS with plugins.
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( header( '/* ' + copy_text + ' */\n' ) )
 		.pipe( sourcemaps.write( './maps' ) )
