@@ -1,4 +1,3 @@
-//const cssnano = require('cssnano');
 const gulp       = require( 'gulp' ),
 	ts           = require( 'gulp-typescript' ),
 	nunjucks     = require( 'gulp-nunjucks' ),
@@ -76,20 +75,14 @@ gulp.task( 'general-scss', () => {
 		autoprefixer( 'last 2 versions', '> 5%', 'not ie 6-9' ),
 		cssnano()
 	];
-	//const plugins = [
-	//	autoprefixer( ['last 2 versions'] ),
-	//	cssnano()
-	//];
+
 	return gulp.src( SourceSCSS )
 		.pipe( plumber() )
-		//.pipe(gulpPrefixer('// Copyright 2014 (C) Aswesome company'))
 		.pipe( sourcemaps.init() )
 		.pipe( sourcemaps.identityMap() )
 		.pipe( sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( 'last 2 versions', '> 5%', 'not ie 6-9' ) )
-		//.pipe( cssnano() )
 		//.pipe( postcss( plugins ) )
-		//.pipe( postcss() )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( header( '/* ' + copy_text + ' */\n' ) )
 		.pipe( sourcemaps.write( './maps' ) )
