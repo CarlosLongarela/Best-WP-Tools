@@ -75,7 +75,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		let byte_check = document.getElementById( 'byte_check' );
 		if ( byte_check ) {
 			byte_check.addEventListener( 'click', function() {
-				window.open( 'http://www.bytecheck.com/results?resource=' + encoded_current_url );
+				window.open( 'https://www.bytecheck.com/results?resource=' + encoded_current_url );
 			} );
 		}
 

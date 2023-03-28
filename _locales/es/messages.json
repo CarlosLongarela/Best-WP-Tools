@@ -28,12 +28,6 @@
     "btn_sucuri_sitecheck": {
         "message": "Comprobar con Sucuri SiteCheck"
     },
-    "btn_geek_flare": {
-        "message": "Medir con Geek Flare"
-    },
-    "btn_keycdn_url_speed": {
-        "message": "Medir con keycdn URL Speed"
-    },
     "btn_sucuri_loadtimetester": {
         "message": "Medir con Sucuri Loadtimetester"
     },
