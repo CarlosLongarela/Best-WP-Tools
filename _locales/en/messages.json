@@ -400,10 +400,25 @@
     "msg_sucuri_check": {
       "message": "Security check & malware"
     },
+    "msg_codeable_title": {
+      "message": "Hire the best WordPress developers"
+    },
+    "msg_vultr_title": {
+      "message": "High Performance Cloud Servers"
+    },
+    "msg_vultr_text": {
+      "message": "Instantly deploy High Performance Cloud Servers with powerful Control Panel & APIs. Accelerate your application: Vultr compute features 100% SSD and high-performance vCPUs. See why all clouds are not created equally. Insights and resources to help drive your business forward faster."
+    },
+    "msg_lucushost_title": {
+      "message": "SSD WordPress Hosting"
+    },
+    "msg_lucushost_text": {
+      "message": "LiteSpeed Server and LiteSpeed Cache for an ultra-fast website. Anti-hacking security rules with Imunify360. Daily and automatic backups. WordPress optimised servers and WP-CLI available. Specialised WordPress support, available 24/7."
+    },
     "msg_pro_next": {
       "message": "A Pro version may be available at some point. Be sure to visit the following url"
     },
     "msg_meanwhile": {
-      "message": "In the meantime, we recommend the following hosting services that I use and if you need to hire a WordPress expert, you will find the best professionals in the sector at Codeable."
+      "message": "In the meantime, I recommend you the following hosting services that I use and if you need to hire a WordPress expert, you will find the best professionals in the sector at Codeable."
     }
 }

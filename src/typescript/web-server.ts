@@ -16,7 +16,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	let check_apache_nginx = document.getElementById( 'check_apache_nginx' );
 
 	if ( check_apache_nginx ) {
-		check_apache_nginx.addEventListener( 'click', function() {
+		check_apache_nginx.addEventListener( 'click', () => {
 			let apache_div = document.getElementById( 'apache_div' );
 			let nginx_div  = document.getElementById( 'nginx_div' );
 
@@ -36,7 +36,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	let copy_btn = document.getElementsByClassName( 'copy_text' );
 
 	for (const element of copy_btn) {
-		element.addEventListener( 'click', function( this: HTMLElement ) {
+		element.addEventListener( 'click', function( this: HTMLButtonElement ) {
 			if ( this.dataset.id2copy ) {
 				utils.copy_text( this.dataset.id2copy );
 			}

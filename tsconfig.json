@@ -4,6 +4,7 @@
     "strict": true,
     "target": "ES6",
     "module": "commonjs",
+    "noImplicitThis": true,
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
