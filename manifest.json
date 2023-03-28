@@ -23,7 +23,6 @@
   },
 
   "permissions": [
-    "tabs"
   ],
   "host_permissions": [
     "https://tabernawp.com/"
