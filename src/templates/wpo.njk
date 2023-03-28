@@ -9,7 +9,7 @@
 				<div id="section_wpo" class="item_wpo active_tab">WPO</div>
 				<div id="section_security" class="item_wpo">{% raw %}{{msg_security}}{% endraw %}</div>
 				<div id="section_ttfb" class="item_wpo">TTFB</div>
-				<div id="section_http2" class="item_wpo">HTTP/2</div>
+				<div id="section_http2" class="item_wpo">HTTP/2-3</div>
 				<div id="section_dns" class="item_wpo">DNS</div>
 				<div id="section_gzip" class="item_wpo">GZIP</div>
 				<div id="section_mail" class="item_wpo">MAIL</div>
@@ -40,14 +40,15 @@
 			</div>
 
 			<div class="wpo_tab" id="target_section_http2">
-				<h2>HTTP/2</h2>
+				<h2>HTTP/2-3</h2>
 				<input id="http2_pro" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_http2_pro}}{% endraw %}">
-				<input id="http2_geek_flare" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_http2_geek_flare}}{% endraw %}">
+				<br />
+				<h2>HTTP/3</h2>
+				<input id="http3_pro" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_http3_pro}}{% endraw %}">
 			</div>
 
 			<div class="wpo_tab" id="target_section_dns">
 				<h2>DNS</h2>
-				<input id="pingdom_dns_health" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_pingdom_dns_health}}{% endraw %}">
 				<input id="mx_toolbox" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_mx_toolbox}}{% endraw %}">
 				<input id="dns_checker" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_dns_checker}}{% endraw %}">
 				<input id="dns_checker_ipv6" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_dns_checker_ipv6}}{% endraw %}">
@@ -55,7 +56,10 @@
 
 			<div class="wpo_tab" id="target_section_gzip">
 				<h2>Gzip</h2>
-				<input id="check_gzip_compression" type="button" class="btn btn_green full_width" value="{% raw %}{{btn_check_gzip_compression}}{% endraw %}">
+				<form id="url" action="https://www.giftofspeed.com/gzip-test/" method="post" target="_blank">
+					<input id="check_gzip_url_value" type="hidden" name="url" value="" >
+					<input id="check_gzip_compression" type="submit" class="btn btn_green full_width" value="{% raw %}{{btn_check_gzip_compression}}{% endraw %}">
+				</form>
 			</div>
 
 			<div class="wpo_tab" id="target_section_mail">

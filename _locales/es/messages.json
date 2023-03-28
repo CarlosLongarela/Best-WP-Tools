@@ -37,11 +37,8 @@
     "btn_http2_pro": {
         "message": "Comprobar con HTTP2.Pro"
     },
-    "btn_http2_geek_flare": {
-        "message": "Comprobar con Geek Flare"
-    },
-    "btn_pingdom_dns_health": {
-        "message": "Comprobar con Pingdom DNS Health"
+    "btn_http3_pro": {
+      "message": "Comprobar con HTTP/3 Check"
     },
     "btn_mx_toolbox": {
         "message": "Comprobar con MX Toolbox"
@@ -53,7 +50,7 @@
         "message": "Comprobar con DNS Checker y IPv6"
     },
     "btn_check_gzip_compression": {
-        "message": "Comprobar con Check GZIP compression"
+        "message": "Comprobar con Gzip/Brotli Compresión"
     },
     "btn_mx_mx_toolbox": {
         "message": "Comprobar registros MX con MX Toolbox"
@@ -277,9 +274,6 @@
     "msg_code_generator": {
       "message": "Generador de código WordPress"
     },
-    "msg_wp_gear": {
-      "message": "Utilidades WordPress"
-    },
     "msg_admin_ref": {
       "message": "Referencia WP Admin"
     },
@@ -400,11 +394,8 @@
     "msg_disable_cron": {
       "message": "Desactivar Cron interno de WordPress"
     },
-    "msg_host_view": {
-      "message": "Previsualizar sitio web en IP Staging"
-    },
     "msg_host2_view": {
-      "message": "Previsualizar de Kinsta de sitio web en IP Staging"
+      "message": "Previsualizar de sitio web en IP Staging"
     },
     "msg_sucuri_check": {
       "message": "Comprobación de seguridad y malware"

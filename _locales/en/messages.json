@@ -37,11 +37,8 @@
     "btn_http2_pro": {
         "message": "Check with HTTP2.Pro"
     },
-    "btn_http2_geek_flare": {
-        "message": "Check with Geek Flare"
-    },
-    "btn_pingdom_dns_health": {
-        "message": "Check with Pingdom DNS Health"
+    "btn_http3_pro": {
+      "message": "Check with HTTP/3 Check"
     },
     "btn_mx_toolbox": {
         "message": "Check with MX Toolbox"
@@ -53,7 +50,7 @@
         "message": "Check with DNS Checker and IPv6"
     },
     "btn_check_gzip_compression": {
-        "message": "Check with Check GZIP compression"
+        "message": "Check with Gzip/Brotli Compression"
     },
     "btn_mx_mx_toolbox": {
         "message": "Check MX records with MX Toolbox"
@@ -277,9 +274,6 @@
     "msg_code_generator": {
       "message": "WordPress code generator"
     },
-    "msg_wp_gear": {
-      "message": "WordPress Gear"
-    },
     "msg_admin_ref": {
       "message": "Reference WP Admin"
     },
@@ -400,11 +394,8 @@
     "msg_disable_cron": {
       "message": "Disable internal WordPress Cron"
     },
-    "msg_host_view": {
-      "message": "Website previewer before it goes live"
-    },
     "msg_host2_view": {
-      "message": "Kinsta website previewer before it goes live"
+      "message": "Website previewer before it goes live"
     },
     "msg_sucuri_check": {
       "message": "Security check & malware"

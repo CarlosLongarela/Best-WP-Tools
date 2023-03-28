@@ -1,4 +1,4 @@
-document.addEventListener( 'DOMContentLoaded', function() {
+document.addEventListener( 'DOMContentLoaded', () => {
 	const items_wpo: NodeListOf<HTMLElement>   = document.querySelectorAll( '.item_wpo' );
 
 	utils.translator( document.body ); // Only if html page has body strings to translate.
@@ -37,14 +37,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		// WPO.
 		let pagespeed_insights = document.getElementById( 'pagespeed_insights' );
 		if ( pagespeed_insights ) {
-			pagespeed_insights.addEventListener( 'click', function() {
+			pagespeed_insights.addEventListener( 'click', () => {
 				window.open( 'https://developers.google.com/speed/pagespeed/insights/?url=' + current_url );
 			} );
 		}
 
 		let geek_flare = document.getElementById( 'geek_flare' );
 		if ( geek_flare ) {
-			geek_flare.addEventListener( 'click', function() {
+			geek_flare.addEventListener( 'click', () => {
 				window.open( 'https://tools.geekflare.com/report/speed-test/' + current_url );
 			} );
 		}
@@ -52,7 +52,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		// Security.
 		let sucuri_sitecheck = document.getElementById( 'sucuri_sitecheck' );
 		if ( sucuri_sitecheck ) {
-			sucuri_sitecheck.addEventListener( 'click', function() {
+			sucuri_sitecheck.addEventListener( 'click', () => {
 				window.open( 'https://sitecheck.sucuri.net/results/' + current_url_without_protocol );
 			} );
 		}
@@ -60,21 +60,21 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		// TTFB.
 		let keycdn_url_speed = document.getElementById( 'keycdn_url_speed' );
 		if ( keycdn_url_speed ) {
-			keycdn_url_speed.addEventListener( 'click', function() {
+			keycdn_url_speed.addEventListener( 'click', () => {
 				window.open( 'https://tools.keycdn.com/performance?url=' + current_url );
 			} );
 		}
 
 		let sucuri_loadtimetester = document.getElementById( 'sucuri_loadtimetester' );
 		if ( sucuri_loadtimetester ) {
-			sucuri_loadtimetester.addEventListener( 'click', function() {
+			sucuri_loadtimetester.addEventListener( 'click', () => {
 				window.open( 'https://performance.sucuri.net/domain/' + current_domain );
 			} );
 		}
 
 		let byte_check = document.getElementById( 'byte_check' );
 		if ( byte_check ) {
-			byte_check.addEventListener( 'click', function() {
+			byte_check.addEventListener( 'click', () => {
 				window.open( 'https://www.bytecheck.com/results?resource=' + encoded_current_url );
 			} );
 		}
@@ -82,80 +82,75 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		// HTTP/2
 		let http2_pro = document.getElementById( 'http2_pro' );
 		if ( http2_pro ) {
-			http2_pro.addEventListener( 'click', function() {
+			http2_pro.addEventListener( 'click', () => {
 				window.open( 'https://http2.pro/check?url=' + encoded_current_url );
 			} );
 		}
 
-		let http2_geek_flare = document.getElementById( 'http2_geek_flare' );
-		if ( http2_geek_flare ) {
-			http2_geek_flare.addEventListener( 'click', function() {
-				window.open( 'https://tools.geekflare.com/report/http2-test/' + current_url );
+		// HTTP/3
+		let http3_pro = document.getElementById( 'http3_pro' );
+		if ( http3_pro ) {
+			http3_pro.addEventListener( 'click', () => {
+				window.open( 'https://http3check.net/?host=' + encoded_current_url );
 			} );
 		}
 
 		// DNS.
-		let pingdom_dns_health = document.getElementById( 'pingdom_dns_health' );
-		if ( pingdom_dns_health ) {
-			pingdom_dns_health.addEventListener( 'click', function() {
-				window.open( 'http://dnscheck.pingdom.com/?domain=' + current_naked_domain );
-			} );
-		}
-
 		let mx_toolbox = document.getElementById( 'mx_toolbox' );
 		if ( mx_toolbox ) {
-			mx_toolbox.addEventListener( 'click', function() {
+			mx_toolbox.addEventListener( 'click', () => {
 				window.open( 'https://mxtoolbox.com/SuperTool.aspx?action=dns%3a' + current_naked_domain + '&run=toolpage' );
 			} );
 		}
 
 		let dns_checker = document.getElementById( 'dns_checker' );
 		if ( dns_checker ) {
-			dns_checker.addEventListener( 'click', function() {
+			dns_checker.addEventListener( 'click', () => {
 				window.open( 'https://dnschecker.org/#A/' + current_domain );
 			} );
 		}
 
 		let dns_checker_ipv6 = document.getElementById( 'dns_checker_ipv6' );
 		if ( dns_checker_ipv6 ) {
-			dns_checker_ipv6.addEventListener( 'click', function() {
+			dns_checker_ipv6.addEventListener( 'click', () => {
 				window.open( 'https://dnschecker.org/#AAAA/' + current_domain );
 			} );
 		}
 
 		// Gzip.
 		let check_gzip_compression = document.getElementById( 'check_gzip_compression' );
-		if ( check_gzip_compression ) {
-			check_gzip_compression.addEventListener( 'click', function() {
-				window.open( 'https://checkgzipcompression.com/?url=' + encoded_current_url );
+		let gzip_url_text          = document.getElementById( 'check_gzip_url_value' ) as HTMLInputElement;
+		if ( check_gzip_compression && gzip_url_text ) {
+			check_gzip_compression.addEventListener( 'click', () => {
+				gzip_url_text.value = encoded_current_url;
 			} );
 		}
 
 		// Mail.
 		let mx_mx_toolbox = document.getElementById( 'mx_mx_toolbox' );
 		if ( mx_mx_toolbox ) {
-			mx_mx_toolbox.addEventListener( 'click', function() {
+			mx_mx_toolbox.addEventListener( 'click', () => {
 				window.open( 'https://mxtoolbox.com/SuperTool.aspx?action=mx%3a' + current_naked_domain + '&run=toolpage' );
 			} );
 		}
 
 		let smtp_mx_toolbox = document.getElementById( 'smtp_mx_toolbox' );
 		if ( smtp_mx_toolbox ) {
-			smtp_mx_toolbox.addEventListener( 'click', function() {
+			smtp_mx_toolbox.addEventListener( 'click', () => {
 				window.open( 'https://mxtoolbox.com/SuperTool.aspx?action=smtp%3a' + current_naked_domain + '&run=toolpage' );
 			} );
 		}
 
 		let blacklist_mx_toolbox = document.getElementById( 'blacklist_mx_toolbox' );
 		if ( blacklist_mx_toolbox ) {
-			blacklist_mx_toolbox.addEventListener( 'click', function() {
+			blacklist_mx_toolbox.addEventListener( 'click', () => {
 				window.open( 'https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a' + current_naked_domain + '&run=toolpage' );
 			} );
 		}
 
 		let mx_gsuite = document.getElementById( 'mx_gsuite' );
 		if ( mx_gsuite ) {
-			mx_gsuite.addEventListener( 'click', function() {
+			mx_gsuite.addEventListener( 'click', () => {
 				window.open( 'https://toolbox.googleapps.com/apps/checkmx/check?domain=' + current_naked_domain + '&dkim_selector=' );
 			} );
 		}
