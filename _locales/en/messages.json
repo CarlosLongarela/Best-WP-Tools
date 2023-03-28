@@ -416,9 +416,9 @@
       "message": "Security check & malware"
     },
     "msg_pro_next": {
-      "message": "Estoy trabajando en la versión Pro que estará disponible en breve. No dejes de visitar la siguiente url:"
+      "message": "A Pro version may be available at some point. Be sure to visit the following url"
     },
     "msg_meanwhile": {
-      "message": "Mientras tanto, te recomnedamos los siguientes servicios de hosting que yo suelo utilizar y si necesitas contratar un experto en WordPress, en Codeable econtrarás los mejores profesionales del sector."
+      "message": "In the meantime, we recommend the following hosting services that I use and if you need to hire a WordPress expert, you will find the best professionals in the sector at Codeable."
     }
 }

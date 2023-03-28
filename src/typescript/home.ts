@@ -1,12 +1,10 @@
 
 document.addEventListener( 'DOMContentLoaded', function() {
-	'use strict';
-
 	utils.translator( document.body ); // Only if html page has body strings to translate.
 	//utils.translator( document.head ); // Only if html page has head strings to translate.
 
 	function show_tab_data_home( tab: any ) {
-		var html, https_img, https_txt;
+		let html, https_img, https_txt;
 
 		html = '';
 
@@ -48,14 +46,18 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 		html += '<p>' + chrome.i18n.getMessage( 'msg_domain' ) + ': <strong>' + utils.extract_hostname( tab.url ) + '</strong></p>';
 
-		var fragment = utils.create( html );
-		document.getElementById( 'url_info' ).appendChild( fragment );
+		let fragment = utils.create( html );
+		let url_info = document.getElementById( 'url_info' );
+
+		if ( url_info ) {
+			url_info.appendChild( fragment );
+		}
 
 		utils.ajax( 'https://tabernawp.com/best-wp-tools/api/?url=' + encodeURI( tab.url ), info_api_url );
 	}
 
 	function info_api_url( response: any ) {
-		var html;
+		let html;
 
 		html = '';
 
@@ -100,13 +102,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
 					html += '<div id="http_headers"><strong>' + chrome.i18n.getMessage( 'msg_headers' ) + ':</strong>' + response.http_headers_html + '</div>';
 				}
 
-				//console.log( response );
-
 			}
 		}
 
-		var fragment = utils.create( html );
-		document.getElementById( 'api_url_info' ).appendChild( fragment );
+		let fragment = utils.create( html );
+		let api_url_info = document.getElementById( 'api_url_info' );
+
+		if ( api_url_info ) {
+			api_url_info.appendChild( fragment );
+		}
 	}
 
 	utils.get_current_tab( show_tab_data_home );
