@@ -8,7 +8,10 @@
         "description": "Extension description"
     },
     "plugin_info": {
-        "message": "Contact us at"
+        "message": "Contact me at"
+    },
+    "plugin_info2": {
+      "message": "Send me suggestions, requests, bugs, or just say hi!"
     },
     "msg_only_http": {
         "message": "Only in https or http pages."
@@ -408,6 +411,9 @@
     },
     "msg_vultr_text": {
       "message": "Instantly deploy High Performance Cloud Servers with powerful Control Panel & APIs. Accelerate your application: Vultr compute features 100% SSD and high-performance vCPUs. See why all clouds are not created equally. Insights and resources to help drive your business forward faster."
+    },
+    "btn_no_cache_page": {
+      "message": "Open page bypassing browser cache"
     },
     "msg_lucushost_title": {
       "message": "SSD WordPress Hosting"

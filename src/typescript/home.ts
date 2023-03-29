@@ -6,6 +6,16 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	function show_tab_data_home( tab: any ) {
 		let html, https_img, https_txt;
 
+		let current_url: string = tab.url;
+
+		// No Cache.
+		let no_cache_page = document.getElementById( 'no_cache_page' );
+		if ( no_cache_page ) {
+			no_cache_page.addEventListener( 'click', () => {
+				window.open( current_url + '?wpt_nocache=' + Date.now() );
+			} );
+		}
+
 		html = '';
 
 		if ( 'https' === tab.url.substring( 0, 5 ) ) { // Url is https

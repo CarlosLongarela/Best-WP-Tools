@@ -116,6 +116,11 @@ fieldset {
 .div_info {
 	p {
 		font-size: 120%;
+
+		&.cl_text_small {
+			font-size: 0.9em;
+			font-style: italic;
+		}
 	}
 }
 
@@ -147,7 +152,7 @@ fieldset {
 
 #best-wp-tools {
 	background-color: #ebebeb;
-	width: 610px; /* until 750px;*/
+	width: 650px; /* until 750px;*/
 	height: 550px; /* until 550px */
 }
 
@@ -157,6 +162,7 @@ fieldset {
 
 #data {
 	margin-top: 1em;
+	padding: 1em 0.5em;
 	overflow: auto;
 	max-height: 450px;
 
@@ -315,7 +321,6 @@ fieldset {
 	}
 
 	&.btn_50 {
-		width: 40vw;
 		text-align: center;
 	}
 }
@@ -348,6 +353,8 @@ fieldset {
 }
 
 #url_info, #api_url_info {
+	margin-top: 1em;
+
 	p {
 		font-size: 90%;
 	}
@@ -552,9 +559,42 @@ textarea.code {
 	}
 }
 
+.cl-flex-50 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	a {
+		width: 42%;
+	}
+}
+
 .wpo_fieldset {
 	h3 {
 		margin-top: 1rem;
 		margin-bottom: 1.5rem;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+	border-radius: 100px;
+
+	&:hover {
+		width: 10px;
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	background: #21759b15;
+	border-radius: 100px;
+
+	&:hover,
+	&:active {
+		background: #21759b;
+		cursor: pointer;
 	}
 }
