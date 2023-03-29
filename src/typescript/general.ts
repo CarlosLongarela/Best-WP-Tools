@@ -56,7 +56,14 @@ const utils = {
 		let frag = document.createDocumentFragment(),
 			temp = document.createElement( 'div' );
 
-		temp.innerHTML = htmlStr;
+		const parser = new DOMParser();
+		const parsed = parser.parseFromString( htmlStr, 'text/html' );
+		const tags   = parsed.getElementsByTagName( 'body' );
+
+		temp.innerHTML = '';
+		for (const tag of tags) {
+			temp.appendChild( tag );
+		}
 
 		while ( temp.firstChild ) {
 			frag.appendChild( temp.firstChild );
