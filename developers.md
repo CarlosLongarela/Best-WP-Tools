@@ -6,6 +6,8 @@
 * Folder ___node_modules___ isn't tracked in Git and we must update npm modules (previous step)
 * We'll execute `$ npm audit` for view vulnerabilities problems and
 * `$ npm audit fix` for fix them
+* For execute gulp tasks we'll run in terminal `$ gulp`
+* If the previous command do not work, we can execute with the full path `./node_modules/.bin/gulp`
 
 ## Tooltips
 ```
@@ -13,4 +15,3 @@
 <span class="tooltiptext">This is a tooltip for short texts</span>
 </div>
 ```
-

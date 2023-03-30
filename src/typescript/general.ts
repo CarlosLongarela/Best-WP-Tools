@@ -95,6 +95,7 @@ const utils = {
 		}
 
 		this.hide_div( 'app_info' );
+		this.hide_div( 'no_cache_page' );
 		this.show_div( 'notice' );
 	}, // /url_not_valid.
 
