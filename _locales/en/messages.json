@@ -13,6 +13,9 @@
     "plugin_info2": {
       "message": "Send me suggestions, requests, bugs, or just say hi!"
     },
+    "concatenate": {
+      "message": "Concatenate scripts in admin"
+    },
     "msg_only_http": {
         "message": "Only in https or http pages."
     },

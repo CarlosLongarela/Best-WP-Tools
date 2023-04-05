@@ -13,6 +13,9 @@
     "plugin_info2": {
       "message": "Envíame sugerencias, peticiones, fallos o simplemente salúdame"
     },
+    "concatenate": {
+      "message": "Concatenar scripts en admin"
+    },
     "msg_only_http": {
         "message": "Sólo en páginas https o http."
     },

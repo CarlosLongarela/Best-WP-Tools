@@ -55,6 +55,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	}
 
+	let concatenate = document.getElementById( 'concatenate' );
+	if ( concatenate ) {
+		concatenate.addEventListener( 'change', function() {
+			( <HTMLInputElement>document.getElementById( 'wp_concatenate' ) ).value = "define( 'CONCATENATE_SCRIPTS', " + ( <HTMLInputElement>this ).value + " );";
+		} );
+	}
+
 	let php_front_memory = document.getElementById( 'php_front_memory' );
 	if ( php_front_memory ) {
 		php_front_memory.addEventListener( 'change', function() {

@@ -66,81 +66,91 @@
 
 				<select name="post_autosave" id="post_autosave">
 					<option value="30">{{msg_post_30_sec}}</option>
-					<option value="60" selected>{{msg_post_60_sec}}</option>
+					<option value="60">{{msg_post_60_sec}}</option>
 					<option value="90">{{msg_post_90_sec}}</option>
-					<option value="120">{{msg_post_2_min}}</option>
+					<option value="120" selected>{{msg_post_2_min}}</option>
 					<option value="180">{{msg_post_3_min}}</option>
 					<option value="240">{{msg_post_4_min}}</option>
 					<option value="300">{{msg_post_5_min}}</option>
 				</select>
 
-				<input type="text" class="code" readonly id="post_autosave_text" value="define( 'AUTOSAVE_INTERVAL', 60 );">
+				<input type="text" class="code" readonly id="post_autosave_text" value="define( 'AUTOSAVE_INTERVAL', 120 );">
 			</fieldset>
 
 			<fieldset class="wp_fieldset visible">
 				<legend>{{msg_post_revisions}}</legend>
 
 				<select name="post_revisions" id="post_revisions">
-					<option value="true" selected>{{msg_revisions_true}}</option>
+					<option value="true">{{msg_revisions_true}}</option>
 					<option value="false">{{msg_revisions_false}}</option>
 					<option value="1">{{msg_revisions_1}}</option>
 					<option value="3">{{msg_revisions_3}}</option>
-					<option value="5">{{msg_revisions_5}}</option>
+					<option value="5" selected>{{msg_revisions_5}}</option>
 					<option value="10">{{msg_revisions_10}}</option>
 					<option value="15">{{msg_revisions_15}}</option>
 				</select>
 
-				<input type="text" class="code" readonly id="post_revisions_text" value="define( 'WP_POST_REVISIONS', true );">
+				<input type="text" class="code" readonly id="post_revisions_text" value="define( 'WP_POST_REVISIONS', 5 );">
 			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
 				<legend>{{msg_disable_file_editor}}</legend>
 
 				<select name="disable_file_editor" id="disable_file_editor">
-					<option value="false" selected>{{msg_no}}</option>
-					<option value="true" >{{msg_yes}}</option>
+					<option value="false">{{msg_no}}</option>
+					<option value="true" selected>{{msg_yes}}</option>
 				</select>
 
-				<input type="text" class="code" readonly id="wp_disable_file_editor" value="define( 'DISALLOW_FILE_EDIT', false );">
+				<input type="text" class="code" readonly id="wp_disable_file_editor" value="define( 'DISALLOW_FILE_EDIT', true );">
 			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
 				<legend>{{msg_ssl_login}}</legend>
 
 				<select name="ssl_login" id="ssl_login">
-					<option value="false" selected>{{msg_no}}</option>
-					<option value="true" >{{msg_yes}}</option>
+					<option value="false">{{msg_no}}</option>
+					<option value="true" selected>{{msg_yes}}</option>
 				</select>
 
-				<input type="text" class="code" readonly id="wp_ssl_login" value="define( 'FORCE_SSL_LOGIN', false );">
+				<input type="text" class="code" readonly id="wp_ssl_login" value="define( 'FORCE_SSL_LOGIN', true );">
 			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
 				<legend>{{msg_ssl_admin}}</legend>
 
 				<select name="ssl_admin" id="ssl_admin">
-					<option value="false" selected>{{msg_no}}</option>
-					<option value="true" >{{msg_yes}}</option>
+					<option value="false">{{msg_no}}</option>
+					<option value="true" selected>{{msg_yes}}</option>
 				</select>
 
-				<input type="text" class="code" readonly id="wp_ssl_admin" value="define( 'FORCE_SSL_ADMIN', false );">
+				<input type="text" class="code" readonly id="wp_ssl_admin" value="define( 'FORCE_SSL_ADMIN', true );">
 			</fieldset>
 
+			<fieldset class="wpo_fieldset visible">
+				<legend>{{concatenate}}</legend>
+
+				<select name="concatenate" id="concatenate">
+					<option value="false" selected>{{msg_no}}</option>
+					<option value="true">{{msg_yes}}</option>
+				</select>
+
+				<input type="text" class="code" readonly id="wp_concatenate" value="define( 'CONCATENATE_SCRIPTS', false );">
+			</fieldset>
 
 			<fieldset class="wp_fieldset visible">
 				<legend>{{msg_front_memory}}</legend>
 
 				<select name="php_front_memory" id="php_front_memory">
-					<option value="40M" selected>40 MB</option>
+					<option value="40M">40 MB</option>
 					<option value="64M">64 MB</option>
 					<option value="128M">128 MB</option>
-					<option value="256M">256 MB</option>
+					<option value="256M" selected>256 MB</option>
 					<option value="512M">512 MB</option>
 					<option value="768M">768 MB</option>
 					<option value="1024M">1024 MB</option>
 				</select>
 
-				<input type="text" class="code" readonly id="php_front_memory_text" value="define( 'WP_MEMORY_LIMIT', '40M );">
+				<input type="text" class="code" readonly id="php_front_memory_text" value="define( 'WP_MEMORY_LIMIT', '256M' );">
 			</fieldset>
 
 
@@ -148,23 +158,23 @@
 				<legend>{{msg_back_memory}}</legend>
 
 				<select name="php_back_memory" id="php_back_memory">
-					<option value="64M" selected>64 MB</option>
+					<option value="64M">64 MB</option>
 					<option value="128M">128 MB</option>
-					<option value="256M">256 MB</option>
+					<option value="256M" selected>256 MB</option>
 					<option value="512M">512 MB</option>
 					<option value="768M">768 MB</option>
 					<option value="1024M">1024 MB</option>
 				</select>
 
-				<input type="text" class="code" readonly id="php_back_memory_text" value="define( 'WP_MAX_MEMORY_LIMIT', '64M );">
+				<input type="text" class="code" readonly id="php_back_memory_text" value="define( 'WP_MAX_MEMORY_LIMIT', '256M' );">
 			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
 				<legend>{{msg_auto_updater}}</legend>
 
 				<select name="auto_updater" id="auto_updater">
-					<option value="false" selected>{{msg_no}}</option>
-					<option value="true" >{{msg_yes}}</option>
+					<option value="false" selected>{{msg_yes}}</option>
+					<option value="true" >{{msg_no}}</option>
 				</select>
 
 				<input type="text" class="code" readonly id="wp_auto_updater" value="define( 'AUTOMATIC_UPDATER_DISABLED', false );">
@@ -174,12 +184,12 @@
 				<legend>{{msg_core_updater}}</legend>
 
 				<select name="core_updater" id="core_updater">
-					<option value="false" selected>{{msg_no}}</option>
-					<option value="'minor'">{{msg_minor_versions}}</option>
+					<option value="false">{{msg_no}}</option>
+					<option value="'minor'" selected>{{msg_minor_versions}}</option>
 					<option value="true">{{msg_major_versions}}</option>
 				</select>
 
-				<input type="text" class="code" readonly id="wp_core_updater" value="define( 'WP_AUTO_UPDATE_CORE', false );">
+				<input type="text" class="code" readonly id="wp_core_updater" value="define( 'WP_AUTO_UPDATE_CORE', 'minor' );">
 			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
@@ -200,4 +210,4 @@
 	<script src="../js/wp-tools.min.js"></script>
 </body>
 </html>
-<!-- Copyright (C) Carlos Longarela 2023/3/29 https://tabernawp.com/ <carlos@longarela.eu>-->
+<!-- Copyright (C) Carlos Longarela 2023/4/5 https://tabernawp.com/ <carlos@longarela.eu>-->

@@ -103,17 +103,14 @@ fieldset {
 	}
 }
 
-.div_info,
-.div_info_theme_plugin {
+.div_info {
 	border: 2px solid $wpBlue;
 	padding: 5px;
 	text-align: center;
 	border-radius: 8px;
 	background-color: #fff;
 	margin: 5px auto;
-}
 
-.div_info {
 	p {
 		font-size: 120%;
 
@@ -124,12 +121,9 @@ fieldset {
 	}
 }
 
-.div_info_theme_plugin {
-	p {
-		font-size: 80%;
-		text-align: left;
-		color: $wpGrey;
-	}
+.app_info {
+	font-size: 0.9em;
+	font-style: italic;
 }
 
 .item_with_img {
@@ -163,7 +157,6 @@ fieldset {
 #data {
 	margin-top: 1em;
 	padding: 1em 0.5em;
-	overflow: auto;
 	max-height: 450px;
 
 	height: 0;
@@ -410,11 +403,6 @@ fieldset {
 	display: none;
 }
 
-.item_hosting {
-	margin: auto;
-	text-align: center;
-}
-
 .title_textarea {
 	max-width: 90%;
 	float: left;
@@ -479,9 +467,9 @@ textarea.code {
 	input {
 		display:none;
 	}
-  }
+}
 
-  .slider {
+.slider {
 	position: absolute;
 	cursor: pointer;
 	top: 0;
@@ -498,33 +486,33 @@ textarea.code {
 		left: 4px;
 		bottom: 4px;
 		background-color: white;
-	  }
-  }
+	}
+}
 
-  input:checked + .slider {
+input:checked + .slider {
 	background-color: $colorNginx;
-  }
+}
 
-  input:focus + .slider {
+input:focus + .slider {
 	box-shadow: 0 0 1px $colorNginx;
-  }
+}
 
-  input:checked + .slider:before {
+input:checked + .slider:before {
 	-webkit-transform: translateX(26px);
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
-  }
+}
 
 /* Rounded sliders */
 .slider.round {
 	border-radius: 34px;
-  }
+}
 
-  .slider.round:before {
+.slider.round:before {
 	border-radius: 50%;
-  }
+}
 
-  .container {
+.container {
 	position: relative;
 	display:inline-block;
 }
