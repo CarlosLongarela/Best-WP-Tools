@@ -1,11 +1,9 @@
 
 
 /* eslint-disable no-unused-vars */
-var utils = {
+const utils = {
 /* eslint-enable no-unused-vars */
 	translator: function( html: any ) {
-		'use strict';
-
 		/**
 		 * This is a part of Chrome Extensions Box
 		 * Read more on GitHub - https://github.com/onikienko/chrome-extensions-box
@@ -13,7 +11,7 @@ var utils = {
 		 * Parse html and replace all {{property name from message.json}} from text nodes, title, alt, value and placeholder attrs
 		 * with chrome.i18n.getMessage http://developer.chrome.com/extensions/i18n.html
 		 */
-		var i,
+		let i,
 			length,
 			attrs_to_check = ['title', 'alt', 'placeholder', 'value', 'href'];
 
@@ -41,13 +39,10 @@ var utils = {
 	}, // /translator.
 
 	ajax: function( url: string, fn: any ) {
-		'use strict';
-
-		var request = new XMLHttpRequest();
+		let request = new XMLHttpRequest();
 
 		request.onreadystatechange = function() {
 			if ( 4 === request.readyState ) {
-				//console.log( request.response );
 				fn( request.response );
 			}
 		};
@@ -58,10 +53,17 @@ var utils = {
 	}, // /ajax.
 
 	create: function( htmlStr: string ) {
-		var frag = document.createDocumentFragment(),
+		let frag = document.createDocumentFragment(),
 			temp = document.createElement( 'div' );
 
-		temp.innerHTML = htmlStr;
+		const parser = new DOMParser();
+		const parsed = parser.parseFromString( htmlStr, 'text/html' );
+		const tags   = parsed.getElementsByTagName( 'body' );
+
+		temp.innerHTML = '';
+		for (const tag of tags) {
+			temp.appendChild( tag );
+		}
 
 		while ( temp.firstChild ) {
 			frag.appendChild( temp.firstChild );
@@ -70,9 +72,7 @@ var utils = {
 	}, // /create.
 
 	get_current_tab: function( fn: any ) {
-		'use strict';
-
-		var self = this;
+		let self = this;
 		chrome.tabs.query( { 'active': true, 'currentWindow': true }, function( tabs: any ) {
 			if ( tabs.length > 0 ) {
 				if ( 'http' !== tabs[0].url.substring( 0, 4 ) ) { // Url don't begin with http or https.
@@ -87,43 +87,49 @@ var utils = {
 	}, // /get_current_tab
 
 	url_not_valid: function() {
-		'use strict';
+		let fragment = this.create( '<p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">https://tabernawp.com/best-wordpress-tools</a></p>' );
 
-		var fragment = this.create( '<p>' + chrome.i18n.getMessage( 'msg_only_http' ) + '</p><p>' + chrome.i18n.getMessage( 'msg_2_only_http' ) + ' <a href="https://tabernawp.com/best-wordpress-tools" target="_blank" rel="noopener">https://tabernawp.com/best-wordpress-tools</a></p>' );
-
-		console.log( fragment );
-
-		document.getElementById( 'notice' ).appendChild( fragment );
+		let notice = document.getElementById( 'notice' );
+		if ( notice ) {
+			notice.appendChild( fragment );
+		}
 
 		this.hide_div( 'app_info' );
+		this.hide_div( 'no_cache_page' );
 		this.show_div( 'notice' );
 	}, // /url_not_valid.
 
 	show_div: function( div_id: string ) {
-		'use strict';
+		let our_div: any = document.getElementById( div_id );
 
-		document.getElementById( div_id ).style.display = 'block';
+		if ( our_div ) {
+			our_div.style.display = 'block';
+		}
 	}, // /show_div.
 
 	hide_div: function( div_id: string ) {
-		'use strict';
+		let our_div: any = document.getElementById( div_id );
 
-		document.getElementById( div_id ).style.display = 'none';
+		if ( our_div ) {
+			our_div.style.display = 'none';
+		}
 	}, // /hide_div.
 
 	show_hide_div: function( div_id: string ) {
-		'use strict';
+		let our_div: any = document.getElementById( div_id );
 
-		if ( document.getElementById( div_id ).style.display === 'none' ) {
-			this.show_div( div_id );
-		} else {
-			this.hide_div( div_id );
+		if ( our_div ) {
+			if ( 'none' === our_div.style.display ) {
+				this.show_div( div_id );
+			} else {
+				this.hide_div( div_id );
+			}
 		}
 	}, // /show_hide_div.
 
 	sleep: function( milliseconds: number ) {
-		var start = new Date().getTime();
-		for ( var i = 0; i < 1e7; i++ ) {
+		let start: number = new Date().getTime();
+		for ( let i = 0; i < 1e7; i++ ) {
 			if ( ( new Date().getTime() - start ) > milliseconds ) {
 				break;
 			}
@@ -131,24 +137,30 @@ var utils = {
 	}, // /sleep
 
 	show_data_div: function() {
-		var data_style = document.getElementById( 'data' ).style;
+		let our_data = document.getElementById( 'data' );
 
-		data_style.height   = 'auto';
-		data_style.overflow = 'auto';
-		data_style.opacity  = '1';
+		if ( our_data ) {
+			let data_style: CSSStyleDeclaration = our_data.style;
+
+			data_style.height   = 'auto';
+			data_style.overflow = 'auto';
+			data_style.opacity  = '1';
+		}
 	}, // /show_data_div.
 
 	copy_text: function( div_id: string ) {
-		'use strict';
-
-		var self: any     = this;
-		var copyText: any = document.getElementById( div_id );
+		let self: any     = this;
+		let copyText: any = document.getElementById( div_id );
+		let our_notice    = document.getElementById( 'notice' );
 
 		copyText.select();
 
-		document.execCommand( 'copy' );
+		navigator.clipboard.writeText( copyText.value );
 
-		document.getElementById( 'notice' ).textContent = chrome.i18n.getMessage( 'msg_text_copied' );
+		if ( our_notice ) {
+			our_notice.textContent = chrome.i18n.getMessage( 'msg_text_copied' );;
+		}
+
 		this.show_div( 'notice' );
 
 		setTimeout( function() {
@@ -157,9 +169,7 @@ var utils = {
 	}, // /copy_text.
 
 	extract_hostname: function( url: string ) {
-		'use strict';
-
-		var hostname;
+		let hostname: string;
 		//find & remove protocol (http, ftp, etc.) and get hostname
 
 		if ( url.indexOf( '://' ) > -1 ) {

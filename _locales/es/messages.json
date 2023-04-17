@@ -8,7 +8,13 @@
         "description": "Extension description"
     },
     "plugin_info": {
-        "message": "Contáctenos en"
+        "message": "Contáctame en"
+    },
+    "plugin_info2": {
+      "message": "Envíame sugerencias, peticiones, fallos o simplemente salúdame"
+    },
+    "concatenate": {
+      "message": "Concatenar scripts en admin"
     },
     "msg_only_http": {
         "message": "Sólo en páginas https o http."
@@ -28,12 +34,6 @@
     "btn_sucuri_sitecheck": {
         "message": "Comprobar con Sucuri SiteCheck"
     },
-    "btn_geek_flare": {
-        "message": "Medir con Geek Flare"
-    },
-    "btn_keycdn_url_speed": {
-        "message": "Medir con keycdn URL Speed"
-    },
     "btn_sucuri_loadtimetester": {
         "message": "Medir con Sucuri Loadtimetester"
     },
@@ -43,11 +43,8 @@
     "btn_http2_pro": {
         "message": "Comprobar con HTTP2.Pro"
     },
-    "btn_http2_geek_flare": {
-        "message": "Comprobar con Geek Flare"
-    },
-    "btn_pingdom_dns_health": {
-        "message": "Comprobar con Pingdom DNS Health"
+    "btn_http3_pro": {
+      "message": "Comprobar con HTTP/3 Check"
     },
     "btn_mx_toolbox": {
         "message": "Comprobar con MX Toolbox"
@@ -59,7 +56,7 @@
         "message": "Comprobar con DNS Checker y IPv6"
     },
     "btn_check_gzip_compression": {
-        "message": "Comprobar con Check GZIP compression"
+        "message": "Comprobar con Gzip/Brotli Compresión"
     },
     "btn_mx_mx_toolbox": {
         "message": "Comprobar registros MX con MX Toolbox"
@@ -283,9 +280,6 @@
     "msg_code_generator": {
       "message": "Generador de código WordPress"
     },
-    "msg_wp_gear": {
-      "message": "Utilidades WordPress"
-    },
     "msg_admin_ref": {
       "message": "Referencia WP Admin"
     },
@@ -332,7 +326,7 @@
       "message": "Nunca has creado un sitio web de WordPress así hasta ahora. Divi es más que un tema de WordPress, es una plataforma de construcción de sitios web completamente nueva que reemplaza el editor de entradas estándar de WordPress con un editor visual muy superior."
     },
     "msg_bloom_plugins": {
-      "message": "Convierte a los visitantes en fieles seguidores. Bloom te ofrece todas las herramientas que necesitas para convertir a los visitantes de tu sitio web en fieles seguidores y clientes. Bloom no sólo se va a convierte muy bien, sino que también tiene un magnífica apariencia."
+      "message": "Convierte a los visitantes en fieles seguidores. Bloom te ofrece todas las herramientas que necesitas para convertir a los visitantes de tu sitio web en fieles seguidores y clientes. Bloom no sólo convierte muy bien, sino que también tiene un magnífica apariencia."
     },
     "msg_elementor_plugins": {
       "message": "El Constructor de Páginas de WordPress líder en el mundo. Diseño de Pixel Perfect en WordPress. La única plataforma de diseño completa que ofrece un diseño perfecto de píxeles, pero que produce un código 100% limpio."
@@ -406,13 +400,34 @@
     "msg_disable_cron": {
       "message": "Desactivar Cron interno de WordPress"
     },
-    "msg_host_view": {
-      "message": "Previsualizar sitio web en IP Staging"
-    },
     "msg_host2_view": {
-      "message": "Previsualizar de Kinsta de sitio web en IP Staging"
+      "message": "Previsualizar de sitio web en IP Staging"
     },
     "msg_sucuri_check": {
       "message": "Comprobación de seguridad y malware"
+    },
+    "msg_codeable_title": {
+      "message": "Contrata a los mejores desarrolladores de WordPress"
+    },
+    "msg_vultr_title": {
+      "message": "Servidores Cloud de alto rendimiento"
+    },
+    "msg_vultr_text": {
+      "message": "Despliega instantáneamente servidores Cloud de alto rendimiento con un potente panel de control y API. Acelera tu aplicación: Vultr compute cuenta con discos 100% SSD y vCPUs de alto rendimiento. Descubre por qué no todas las nubes son iguales. Ideas y recursos para ayudar a impulsar tu negocio más rápido."
+    },
+    "btn_no_cache_page": {
+      "message": "Abrir la página evitando la caché de navegador"
+    },
+    "msg_lucushost_title": {
+      "message": "Hosting WordPress SSD"
+    },
+    "msg_lucushost_text": {
+      "message": "Servidor LiteSpeed y LiteSpeed Cache para una web ultrarrápida. Reglas de seguridad antihackeo con Imunify360. Copias de seguridad diarias y automáticas. Servidores optimizados para WordPress y WP-CLI disponible. Soporte especializado en WordPress, disponible 24/7."
+    },
+    "msg_pro_next": {
+      "message": "Es posible que en algún momento esté disponible una versión Pro. No dejes de visitar la siguiente url:"
+    },
+    "msg_meanwhile": {
+      "message": "Mientras tanto, te recomiendo los siguientes servicios de hosting que yo suelo utilizar y si necesitas contratar un experto en WordPress, en Codeable econtrarás los mejores profesionales del sector."
     }
 }

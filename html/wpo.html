@@ -4,7 +4,6 @@
 	<title>WPO (Tab 2)</title>
 	<meta charset="UTF-8"/>
 	<script src="../js/general.min.js"></script>
-	<script src="../js/analytics.js"></script>
 	<link rel="stylesheet" href="../css/styles.min.css" type="text/css"></link>
 </head>
 <body id="best-wp-tools">
@@ -31,16 +30,8 @@
 		<a href="wp-code.html"><img src="../img/wp-code-48.png"></a>
 		</div>
 
-	<div id="menu_wp-plugins" class="item">
-		<a href="wp-plugins.html"><img src="../img/wp-plugins-48.png"></a>
-		</div>
-
-	<div id="menu_wp-themes" class="item">
-		<a href="wp-themes.html"><img src="../img/wp-themes-48.png"></a>
-		</div>
-
-	<div id="menu_hosting" class="item">
-		<a href="hosting.html"><img src="../img/hosting-48.png"></a>
+	<div id="menu_pro" class="item">
+		<a href="pro.html"><img src="../img/pro-48.png"></a>
 		</div>
 </nav>
 
@@ -53,7 +44,7 @@
 				<div id="section_wpo" class="item_wpo active_tab">WPO</div>
 				<div id="section_security" class="item_wpo">{{msg_security}}</div>
 				<div id="section_ttfb" class="item_wpo">TTFB</div>
-				<div id="section_http2" class="item_wpo">HTTP/2</div>
+				<div id="section_http2" class="item_wpo">HTTP/2-3</div>
 				<div id="section_dns" class="item_wpo">DNS</div>
 				<div id="section_gzip" class="item_wpo">GZIP</div>
 				<div id="section_mail" class="item_wpo">MAIL</div>
@@ -63,14 +54,15 @@
 				<h2>WPO</h2>
 
 				<input id="pagespeed_insights" type="button" class="btn btn_green full_width" value="{{btn_pagespeed_insights}}">
-				<input id="geek_flare" type="button" class="btn btn_green full_width" value="{{btn_geek_flare}}">
 
 				<p class="txt_notice">* {{msg_other_wpo_links}}</p>
 
-				<a class="btn btn_50 btn_bold_border" href="https://tools.pingdom.com/" target="_blank" rel="noopener noreferrer">Pingdom Website Speed Test</a>
-				<a class="btn btn_50 btn_bold_border" href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">GTMetrix</a>
-				<a class="btn btn_50 btn_bold_border" href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a>
-				<a class="btn btn_50 btn_bold_border" href="https://tools.keycdn.com/speed" target="_blank" rel="noopener noreferrer">keycdn Website Speed Test</a>
+				<div class="cl-flex-50">
+					<a class="btn btn_50 btn_bold_border" href="https://tools.pingdom.com/" target="_blank" rel="noopener noreferrer">Pingdom Website Speed Test</a>
+					<a class="btn btn_50 btn_bold_border" href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">GTMetrix</a>
+					<a class="btn btn_50 btn_bold_border" href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a>
+					<a class="btn btn_50 btn_bold_border" href="https://tools.keycdn.com/speed" target="_blank" rel="noopener noreferrer">keycdn Website Speed Test</a>
+				</div>
 			</div>
 
 			<div class="wpo_tab" id="target_section_security">
@@ -80,20 +72,20 @@
 
 			<div class="wpo_tab" id="target_section_ttfb">
 				<h2>TTFB (Time To First Byte)</h2>
-				<input id="keycdn_url_speed" type="button" class="btn btn_green full_width" value="{{btn_keycdn_url_speed}}">
 				<input id="sucuri_loadtimetester" type="button" class="btn btn_green full_width" value="{{btn_sucuri_loadtimetester}}">
 				<input id="byte_check" type="button" class="btn btn_green full_width" value="{{btn_byte_check}}">
 			</div>
 
 			<div class="wpo_tab" id="target_section_http2">
-				<h2>HTTP/2</h2>
+				<h2>HTTP/2-3</h2>
 				<input id="http2_pro" type="button" class="btn btn_green full_width" value="{{btn_http2_pro}}">
-				<input id="http2_geek_flare" type="button" class="btn btn_green full_width" value="{{btn_http2_geek_flare}}">
+				<br />
+				<h2>HTTP/3</h2>
+				<input id="http3_pro" type="button" class="btn btn_green full_width" value="{{btn_http3_pro}}">
 			</div>
 
 			<div class="wpo_tab" id="target_section_dns">
 				<h2>DNS</h2>
-				<input id="pingdom_dns_health" type="button" class="btn btn_green full_width" value="{{btn_pingdom_dns_health}}">
 				<input id="mx_toolbox" type="button" class="btn btn_green full_width" value="{{btn_mx_toolbox}}">
 				<input id="dns_checker" type="button" class="btn btn_green full_width" value="{{btn_dns_checker}}">
 				<input id="dns_checker_ipv6" type="button" class="btn btn_green full_width" value="{{btn_dns_checker_ipv6}}">
@@ -101,7 +93,10 @@
 
 			<div class="wpo_tab" id="target_section_gzip">
 				<h2>Gzip</h2>
-				<input id="check_gzip_compression" type="button" class="btn btn_green full_width" value="{{btn_check_gzip_compression}}">
+				<form id="url" action="https://www.giftofspeed.com/gzip-test/" method="post" target="_blank">
+					<input id="check_gzip_url_value" type="hidden" name="url" value="" >
+					<input id="check_gzip_compression" type="submit" class="btn btn_green full_width" value="{{btn_check_gzip_compression}}">
+				</form>
 			</div>
 
 			<div class="wpo_tab" id="target_section_mail">
@@ -119,3 +114,4 @@
 	<script src="../js/wpo.min.js"></script>
 </body>
 </html>
+<!-- Copyright (C) Carlos Longarela 2023/4/5 https://tabernawp.com/ <carlos@longarela.eu>-->
