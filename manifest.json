@@ -22,10 +22,9 @@
     }
   },
 
-  "optional_permissions": [
+  "permissions": [
     "activeTab"
   ],
-
 
   "commands": {
     "_execute_action": {
