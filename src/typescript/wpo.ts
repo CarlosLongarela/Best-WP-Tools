@@ -117,6 +117,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			} );
 		}
 
+		let dns_historical = document.getElementById( 'dns_historical' );
+		if ( dns_historical ) {
+			dns_historical.addEventListener( 'click', () => {
+				window.open( 'https://dnshistory.org/dns-records/' + current_domain );
+			} );
+		}
+
 		// Gzip.
 		let check_gzip_compression = document.getElementById( 'check_gzip_compression' );
 		let gzip_url_text          = document.getElementById( 'check_gzip_url_value' ) as HTMLInputElement;

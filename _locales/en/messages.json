@@ -55,6 +55,9 @@
     "btn_dns_checker_ipv6": {
         "message": "Check with DNS Checker and IPv6"
     },
+    "btn_dns_historical": {
+      "message": "Check DNS history"
+    },
     "btn_check_gzip_compression": {
         "message": "Check with Gzip/Brotli Compression"
     },
