@@ -157,6 +157,21 @@
     "msg_wp_config_title": {
         "message": "Options for wp-config.php"
     },
+    "msg_wp_options": {
+      "message": "WordPress options"
+    },
+    "msg_wp_options_desc": {
+      "message": "It is not recommended to make changes to this screen. If you are going to make changes, first make a copy of your WordPress options table."
+    },
+    "msg_wp_options_go": {
+      "message": "Go to WordPress hidden options page"
+    },
+    "msg_block_edit": {
+      "message": "Manage patterns"
+    },
+    "msg_block_edit_go": {
+      "message": "Go to the Patterns Management page"
+    },
     "msg_security_keys": {
         "message": "Security Keys"
     },

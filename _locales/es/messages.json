@@ -157,6 +157,21 @@
     "msg_wp_config_title": {
         "message": "Opciones de wp-config.php"
     },
+    "msg_wp_options": {
+        "message": "Opciones de WordPress"
+    },
+    "msg_wp_options_desc": {
+        "message": "No se recomienda realizar cambios en esta pantalla. Si los va a realizar, realice primero una copia de su tabla de opciones de WordPress."
+    },
+    "msg_wp_options_go": {
+      "message": "Ir a la página oculta de opciones de WordPress"
+    },
+    "msg_block_edit": {
+        "message": "Gestionar patrones"
+    },
+    "msg_block_edit_go": {
+      "message": "Ir a la página de gestión de patrones"
+    },
     "msg_security_keys": {
         "message": "Claves de seguridad"
     },

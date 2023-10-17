@@ -38,7 +38,18 @@
 		<div id="data">
 			<div id="notice"></div>
 
-			<h1>{{msg_wp_tools_title}}</h1>
+			<h1 class="separate-bottom">{{msg_wp_tools_title}}</h1>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{{msg_block_edit}}</legend>
+				<a id="wp_patterns" class="btn btn_50 btn_border_more" target="_blank" rel="noopener" title="{{msg_block_edit_go}}">{{msg_block_edit_go}}</a>
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{{msg_wp_options}}</legend>
+				<p class="warning-text">{{msg_wp_options_desc}}</p>
+				<a id="wp_options" class="btn btn_50 btn_border_more" target="_blank" rel="noopener" title="{{msg_wp_options_go}}">{{msg_wp_options_go}}</a>
+			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
 				<legend>{{msg_security_keys}}</legend> 
@@ -210,4 +221,4 @@
 	<script src="../js/wp-tools.min.js"></script>
 </body>
 </html>
-<!-- Copyright (C) Carlos Longarela 2023/4/23 https://tabernawp.com/ <carlos@longarela.eu>-->
+<!-- Copyright (C) Carlos Longarela 2023/10/17 https://tabernawp.com/ <carlos@longarela.eu>-->

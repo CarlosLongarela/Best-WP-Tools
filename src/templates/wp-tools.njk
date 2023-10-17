@@ -3,7 +3,18 @@
 
 {% include "partials/header.njk" %}
 
-			<h1>{% raw %}{{msg_wp_tools_title}}{% endraw %}</h1>
+			<h1 class="separate-bottom">{% raw %}{{msg_wp_tools_title}}{% endraw %}</h1>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_block_edit}}{% endraw %}</legend>
+				<a id="wp_patterns" class="btn btn_50 btn_border_more" target="_blank" rel="noopener" title="{% raw %}{{msg_block_edit_go}}{% endraw %}">{% raw %}{{msg_block_edit_go}}{% endraw %}</a>
+			</fieldset>
+
+			<fieldset class="wpo_fieldset visible">
+				<legend>{% raw %}{{msg_wp_options}}{% endraw %}</legend>
+				<p class="warning-text">{% raw %}{{msg_wp_options_desc}}{% endraw %}</p>
+				<a id="wp_options" class="btn btn_50 btn_border_more" target="_blank" rel="noopener" title="{% raw %}{{msg_wp_options_go}}{% endraw %}">{% raw %}{{msg_wp_options_go}}{% endraw %}</a>
+			</fieldset>
 
 			<fieldset class="wpo_fieldset visible">
 				<legend>{% raw %}{{msg_security_keys}}{% endraw %}</legend> {# https://jsfiddle.net/ #}

@@ -1,6 +1,6 @@
 {
   "name": "cl-best-wp-tools",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Browser extension with WordPress Utils",
   "main": "gulpfile.js",
   "dependencies": {

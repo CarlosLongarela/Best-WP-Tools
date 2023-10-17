@@ -586,3 +586,12 @@ input:checked + .slider:before {
 		cursor: pointer;
 	}
 }
+
+.warning-text {
+	color: $colorFail;
+	font-style: italic;
+}
+
+.separate-bottom {
+	margin-bottom: 1rem;
+}

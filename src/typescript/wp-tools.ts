@@ -5,7 +5,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	function set_btns_url( tab: any ) {
 		let current_url    = tab.url;
 		let current_domain = utils.extract_hostname( current_url );
-		let current_domain_url;
+		let current_domain_url:String;
 
 		if ( 'https' === tab.url.substring( 0, 5 ) ) { // Url is https
 			current_domain_url = 'https://' + current_domain;
@@ -16,6 +16,22 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		( <HTMLInputElement>document.getElementById( 'wp_site_url' ) ).value = "define( 'WP_SITEURL', '" + current_domain_url + "' );";
 		( <HTMLInputElement>document.getElementById( 'wp_home' ) ).value = "define( 'WP_HOME', '" + current_domain_url + "' );";
 		( <HTMLInputElement>document.getElementById( 'wp_cookie_domain' ) ).value = "define( 'COOKIE_DOMAIN', '" + current_domain + "' );";
+
+		// WP Options.
+		let wp_options = document.getElementById( 'wp_options' );
+		if ( wp_options ) {
+			wp_options.addEventListener( 'click', () => {
+				window.open( current_domain_url + '/wp-admin/options.php' );
+			} );
+		}
+
+		// WP Patterns.
+		let wp_patterns = document.getElementById( 'wp_patterns' );
+		if ( wp_patterns ) {
+			wp_patterns.addEventListener( 'click', () => {
+				window.open( current_domain_url + '/wp-admin/edit.php?post_type=wp_block' );
+			} );
+		}
 	}
 
 	utils.get_current_tab( set_btns_url );
