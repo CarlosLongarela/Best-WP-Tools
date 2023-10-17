@@ -161,7 +161,7 @@
         "message": "Opciones de WordPress"
     },
     "msg_wp_options_desc": {
-        "message": "No se recomienda realizar cambios en esta pantalla. Si los va a realizar, realice primero una copia de su tabla de opciones de WordPress."
+        "message": "No se recomienda realizar cambios en esta pantalla. Si los vas a realizar, realiza primero una copia de tu tabla de opciones de WordPress."
     },
     "msg_wp_options_go": {
       "message": "Ir a la página oculta de opciones de WordPress"
